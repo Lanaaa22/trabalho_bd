@@ -5,7 +5,7 @@ Trabalho desenvolvido durante a disciplina de Banco de dados
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
+Ilanna dos Reis Cardoso cardosoilanna96@gmail.com
 segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
 ...<br>
 
