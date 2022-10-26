@@ -66,6 +66,8 @@ A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição d
 
 
 ### 6	MODELO LÓGICO<br>
+![image](https://user-images.githubusercontent.com/109684951/198075168-eb9a9810-0aa2-448f-a0f2-aaefce631b2f.png)
+
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
