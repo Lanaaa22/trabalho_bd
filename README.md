@@ -5,10 +5,10 @@ Trabalho desenvolvido durante a disciplina de Banco de dados
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-Ilanna dos Reis Cardoso cardosoilanna96@gmail.com
-Mariana Lopes marianalopesgovea@gmail.com
-Bruna Ramos Rocha brunaramosrocha72@gmail.com
-Daianny Maria dadaymaria1@hotmail.com
+Ilanna dos Reis Cardoso cardosoilanna96@gmail.com<br>
+Mariana Lopes marianalopesgovea@gmail.com<br>
+Bruna Ramos Rocha brunaramosrocha72@gmail.com<br>
+Daianny Maria dadaymaria1@hotmail.com<br>
 ...<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
@@ -36,11 +36,11 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
 > A Açaiteria "Açaifes" precisa inicialmente dos seguintes relatórios:
- *Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)
- *Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)
- *Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)
- *Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)
- *Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o fluxo de pedidos)  
+ *Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)<br>
+ *Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)<br>
+ *Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)<br>
+ *Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)<br>
+ *Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o fluxo de pedidos)  <br>
 
  ### 5.MODELO CONCEITUAL<br>
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
