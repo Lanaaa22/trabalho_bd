@@ -1,4 +1,4 @@
-# TRABALHO 01:  Açaives
+# TRABALHO 01:  Açaifes
 Trabalho desenvolvido durante a disciplina de Banco de dados
 
 # Sumário
