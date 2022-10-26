@@ -11,19 +11,12 @@ Bruna Ramos Rocha brunaramosrocha72@gmail.com
 Daianny Maria dadaymaria1@hotmail.com
 ...<br>
 
-
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
 <br>e motivação da escolha realizada. <br>
 
-> A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que desde o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em nenhuma hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos.
-Para que as aplicações sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode er feito o controle dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais produtos e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao proprietário,vizamos essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o responsável e assim corrigí-las de maneira mais direta e controle também da data de contratação e etc deste  pois entendemos que é muito mais provável alcançar o sucesso se houver  uma equipe unida e organizada.
-
---------Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso-----(frase motivacional necessária para que o empresário insira aos funcionários um controle de modo que os mesmos aceitem como algo bom e não como uma vigilancia constante e assim o cumpram com mais amor )----------
-
-
-
-
+> A empresa "Devcom Projetos" visa colaborar com desenvolvimento de projetos para uma sociedade melhor. Sabendo-se dos desafios para gerenciar projetos dentro de uma empresa e visando unir as informações relativas a funcionários, departamentos e projetos em um mesmo local, ficamos motivados com o desenvolvimento deste sistema. O Sistema "Devcom" tem como objetivo gerenciar todas as informações ao desenvolvimento das atividades de projetos em diversas localidades do país. Para realizar suas operações adequadamente e empresa necessita que sistema que armazene informações relativas aos Projetos, Departamentos e Empregados, além de também armazenar dados sobre  Dependentes e Históricos de Salário dos empregados. O sistema deverá gerar um conjunto de relatórios que por sua vez atenderá os anseios da empresa em questão.
+ 
 
 ### 3.MINI-MUNDO<br>
 
@@ -34,8 +27,7 @@ cujos elementos são propriedades que desejamos incluir, processar, armazenar,
 gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
 
-> Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado as informações de cpf, formas de contato e endereço. Além disso, será armazenado as informações de produto, sendo elas código, valor, tamanho, complementos (tabela nova). Um cliente poderá comprar vários produtos e um produto poderá ser vendido para vários clientes. Para melhor supervisão, será armazenado nesse sistema as informações do funcionário, ele possuirá nome, código, salário, data de contratação e departamento (código do departamento (chave estrangeira)). Um funcioário rea
-
+> Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado as informações de cpf, formas de contato e endereço. Além disso, será armazenado as informações de produto, sendo elas código, valor, tamanho, complementos (tabela nova). Um cliente poderá comprar vários produtos e um produto poderá ser vendido para vários clientes. Para melhor supervisão, será armazenado nesse sistema as informações do funcionário, ele possuirá nome, código, salário, data de contratação e departamento (código do departamento (chave estrangeira)). Um funcioário realiza vários pedidos e o pedido é realizado por apenas um funcionário.
 
 
 ### 4.PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
@@ -44,12 +36,11 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
 > A Açaiteria "Açaifes" precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
-* Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
-* Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
-* Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo. 
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa.
+ *Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)
+ *Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)
+ *Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)
+ *Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)
+ *Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o fluxo de pedidos)  
 
  ### 5.MODELO CONCEITUAL<br>
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
