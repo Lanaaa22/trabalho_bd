@@ -37,6 +37,8 @@ A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição d
  *Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o fluxo de pedidos)  <br>
 
  ### 5.MODELO CONCEITUAL<br>
+ ![image](https://user-images.githubusercontent.com/109684951/198074486-c4430376-f96b-4f22-b12a-3913b7781b58.png)
+
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
     B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 5 e o Máximo 7.
         * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
