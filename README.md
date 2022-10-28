@@ -34,10 +34,7 @@ A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição d
  *Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)<br>
  *Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)<br>
  *Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)<br>
- *Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o fluxo de pedidos)  <br>
-
-![image](https://user-images.githubusercontent.com/109684951/198705481-842f6338-e6e5-4208-9b4b-90a65a8752b9.png)
-
+ *Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o 
 
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
     B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 5 e o Máximo 7.
@@ -65,8 +62,8 @@ A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição d
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
 
-### 6	MODELO LÓGICO<br>
-![image](https://user-images.githubusercontent.com/109684951/198075168-eb9a9810-0aa2-448f-a0f2-aaefce631b2f.png)
+### 6	MODELO LÓGICO
+![image](https://user-images.githubusercontent.com/109684951/198706413-d59ead9d-5406-4c24-b6bc-ed5f56978403.png)
 
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
