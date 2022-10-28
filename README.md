@@ -72,7 +72,6 @@ Elisa
         (não serão aceitos modelos que não estejam em conformidade)
 
 ### 7	MODELO FÍSICO<br>
-        > /* Lógico_1BD: */
 
 DROP TABLE IF EXISTS TELEFONE;
 CREATE TABLE 
