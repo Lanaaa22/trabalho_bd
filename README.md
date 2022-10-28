@@ -87,6 +87,8 @@ A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição d
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Usar o colab para apresentar os resultados que devem incluir as instruções SQL + resultados em forma de tabela.<br>
+    
+    LINK DO COLAB: https://colab.research.google.com/drive/1TnGEAMw-GhBKL_J_CNiLCnEioEFcl8vr?usp=sharing
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
