@@ -51,10 +51,10 @@ A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição d
         
     
 #### 5.1 Validação do Modelo Conceitual
-![image](https://user-images.githubusercontent.com/109684951/198708591-2a41929d-393c-43ea-a331-f74b556787f3.png)
-
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+![image](https://user-images.githubusercontentGrupo01]: Camila,yasmim,Isabellay e Davi nunes 
+    [Grupo02]: [Nomes Eduardo
+Nycooly
+Elisa
 
 #### 5.2 Descrição dos dados 
     [objeto]: [descrição do objeto]
