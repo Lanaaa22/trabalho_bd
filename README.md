@@ -51,18 +51,29 @@ A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição d
         
     
 #### 5.1 Validação do Modelo Conceitual
-![image](https://user-images.githubusercontentGrupo01]: Camila,yasmim,Isabellay e Davi nunes 
-    [Grupo02]: [Nomes Eduardo
-Nycooly
-Elisa
+> GRUPO 1: Camila,yasmim,Isabellay e Davi nunes 
+> GRUPO 2: Eduardo, Paulo Cezar, Nycooly e Elisa
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
-
+    TELEFONE: Tabela que armazena o número de telefone de cada cliente e cada número tem um código<br>
+    PEDIDO: Tabela que armazena todas as informações de cada pedido feito por um cliente<br>
+    ATENDENTE: Tabela que armazena as informações referida a cada atendente que monta o produto<br>
+    MOTOBOY: Tabela que armazena as informações de cada motoboy que entrega o pedido<br>
+    ENDERECO: Tabela referente ao endereço de cada Cliente<br>
+    BAIRRO: Tabela que armazena o valor referente ao Bairro de cada Cliente<br>
+    ESTADO: Tabela que armazena o valor referente ao Estado de cada Cliente<br>
+    TIPO_LOGRADOURO: Tabela que armazena o tipo logradouro relacionado a cada Cliente<br>
+    CIDADE: Tabela que armazena a cidade relacionada a cada cliente<br>
+    PAGAMENTO: Tabela que armazena a forma de pagamento que cada cliente optou<br>
+    PRODUTO: Tabela referente ao produto que foi escolhido por cada cliente<br>
+    COMPLEMENTO: Tabela referente aos complementos de cada produto de cada cliente<br>
+    FRUTA: Tabela referente a opção da fruta de cada produto de cada cliente<br>
+    CALDA: Tabela referente a opção da calda de cada produto de cada cliente<br>
+    PRODUTO_COMPLEMENTO: Relacionamento referente ao complemento e ao produto<br>
+    PRODUTO_FRUTA: Relacionamento referente ao produto e a escolha da fruta<br>
+    PRODUTO_CALDA: Relacionamento referente ao produto e a escolha da calda<br>
+    PEDIDO_PRODUTO: Relacionamento referente ao pedido e o produto escolhido no pedido por cada cliente<br>
 
 ### 6	MODELO LÓGICO
 ![image](https://user-images.githubusercontent.com/109684951/198706413-d59ead9d-5406-4c24-b6bc-ed5f56978403.png)
