@@ -34,15 +34,15 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
     
 > A Açaiteria "Açaifes" precisa inicialmente dos seguintes relatórios:
 
-* Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)<br>
+* Relatório que mostre o valor total do pedido de cada cliente.<br>
 
-* Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse 		pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)<br>
+* Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse 		pedido.<br>
 
-* Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, 		quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)<br>
+* Relatório que mostre o valor total em taxas de entrega realizado por cada motoboy.<br>
 
- * Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)<br>
+ * Relatório com a quantidade de pedidos por cada tamanho do produto, para obter uma relação de demanda.<br>
 
- * Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a 		quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o pedido)
+ * Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a 		quantidade de pedidos por cada forma de pagamento. 
 
 
 
