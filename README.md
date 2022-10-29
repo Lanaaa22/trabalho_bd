@@ -433,7 +433,7 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 > LINK DO COLAB:
-	https://colab.research.google.com/drive/1AhTAhI60FVkg8UhlZw7WZxFTq1wd2FuV?usp=sharing<br>
+	https://colab.research.google.com/drive/1AhTAhI60FVkg8UhlZw7WZxFTq1wd2FuV?usp=sharing <br>
 	
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
