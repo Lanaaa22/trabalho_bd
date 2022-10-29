@@ -13,14 +13,14 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO
 
->A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que desde o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em nenhuma hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos. Para que as aplicações sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode er feito o controle dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais produtos e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao proprietário,vizamos essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o responsável e assim corrigí-las de maneira mais direta e controle também da data de contratação e etc deste pois entendemos que é muito mais provável alcançar o sucesso se houver uma equipe unida e organizada.
---------Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso-----(frase motivacional necessária para que o empresário insira aos funcionários um controle de modo que os mesmos aceitem como algo bom e não como uma vigilancia constante e assim o cumpram com mais amor )----------
- 
+	A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto<br>		Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que 		desde<br> o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em 	nenhuma<br> hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos. Para 	que as aplicações<br> sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode ser feito o 		controle<br> dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais 	produtos<br> e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao 			proprietário,vizamos<br> essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o 	responsável e assim corrigí-las de<br> maneira mais direta e controle também da data de contratação e etc deste pois entendemos 	que é muito mais provável alcançar o<br> sucesso se houver uma equipe unida e organizada.<br>
+	--------Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso-----(frase<br> motivacional necessária para que o empresário insira aos funcionários um controle de modo que os mesmos aceitem como algo bom e não como<br> uma vigilancia constante e assim o cumpram com mais amor )----------<br>
+
  
 
 ### 3.MINI-MUNDO<br>
 
-	Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada 		cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado as 	informações de codigo, telefone e endereço. Um cliente possui deve possuir um único cadastro e o cadastro pertencer a somente um 	 cliente. Além disso, será armazenado as informações sobre cada pedido relizado pelo cliente, sendo elas código, valor unitario de 	   cada produto, quantidade de cada produto, complementos, frutas e calda. Um cliente poderá comprar vários ou nehnum produto e um 	   produto poderá ser vendido para vários ou nenhum cliente. Um produduto possui código e tamanho, sendo que cada pedido possui um           ou vários produtos e cada produto pertence a vários ou nenhum pedido. Para melhor supervisão, será armazenado nesse sistema as 	    informações de cada  funcionário, ele possuirá nome, código, salário, data de contratação. Um funcioário realiza vários pedidos 	    ou nenhum pedido e o pedido é realizado por apenas um funcionário.
+	Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada<br>		cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado 		as<br> 	informações de codigo, telefone e endereço. Um cliente possui deve possuir um único cadastro e o cadastro pertencer a 		somente<br> um cliente. Além disso, será armazenado as informações sobre cada pedido relizado pelo cliente, sendo elas código, 		valor<br> unitario de cada produto, quantidade de cada produto, complementos, frutas e calda. Um cliente poderá comprar vários 		ou<br> nehnum produto e um produto poderá ser vendido para vários ou nenhum cliente. Um produduto possui código e tamanho, sendo 	 que cada<br> pedido possui um ou vários produtos e cada produto pertence a vários ou nenhum pedido. Para melhor supervisão, 		será<br> armazenado nesse sistema as informações de cada  funcionário, ele possuirá nome, código, salário, data de contratação.		<br> Um funcionário realiza vários pedidos ou nenhum pedido e o pedido é realizado por apenas um funcionário.<br>
 
 
 ### 4.PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
@@ -44,9 +44,9 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
  > informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)   
  
- 	* Cliente
- 	* Pedido
- 	* Produto
+ 	* Cliente<br>
+ 	* Pedido<br>
+ 	* Produto<br>
     
  5. MODELO CONCEITUAL
     * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
