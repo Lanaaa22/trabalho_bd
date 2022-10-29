@@ -45,9 +45,9 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
  > informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)   
  
-	- Cliente
-	- Pedido
-	- Produto
+* Cliente
+* Pedido
+* Produto
 
  ### MODELO CONCEITUAL
  ![image](https://user-images.githubusercontent.com/109684951/198835219-9eb528e4-cd67-45ca-ae6b-1e9e501b2154.png)
