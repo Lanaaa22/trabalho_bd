@@ -59,8 +59,8 @@ D) Qualidade e Clareza
         
     
 #### 5.1 Validação do Modelo Conceitual
-> GRUPO 1: Camila,yasmim,Isabellay e Davi nunes 
-> GRUPO 2: Eduardo, Paulo Cezar, Nycooly e Elisa
+> GRUPO 1: Camila,yasmim,Isabellay e Davi nunes<br>
+> GRUPO 2: Eduardo, Paulo Cezar, Nycooly e Elisa<br>
 
 #### 5.2 Descrição dos dados 
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
