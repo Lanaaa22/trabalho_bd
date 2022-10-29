@@ -76,7 +76,8 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 * PEDIDO_PRODUTO: Relacionamento referente ao pedido e o produto escolhido no pedido por cada cliente<br>
 
 ### 6	MODELO LÓGICO
-![image](https://user-images.githubusercontent.com/109684951/198706413-d59ead9d-5406-4c24-b6bc-ed5f56978403.png)
+![image](https://user-images.githubusercontent.com/109684951/198835905-aff59955-46de-4daa-bcd9-adfa2fe1341c.png)
+
 
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
