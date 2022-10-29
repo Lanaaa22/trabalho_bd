@@ -50,12 +50,8 @@ Daianny Maria dadaymaria1@hotmail.com<br>
  	* Produto
     
  5. MODELO CONCEITUAL
-    * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-D) Qualidade e Clareza
-    Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-    Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-    e tuplas falsas (Aplicar os conceitos de normalização abordados).
+    ![image](https://user-images.githubusercontent.com/109684951/198834615-fe1ac5d2-4c33-4ae7-9ee0-3776d8866468.png)
+
         
     
 #### 5.1 Validação do Modelo Conceitual
