@@ -50,7 +50,7 @@ Daianny Maria dadaymaria1@hotmail.com<br>
  	* Produto
     
  5. MODELO CONCEITUAL
-    ![image](https://user-images.githubusercontent.com/109684951/198834615-fe1ac5d2-4c33-4ae7-9ee0-3776d8866468.png)
+![image](https://user-images.githubusercontent.com/109684951/198834832-6e1fdfe8-8b59-4352-be5d-f0ee63122c6c.png)
 
         
     
