@@ -20,7 +20,7 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
 ### 3.MINI-MUNDO<br>
 
-> Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado as informações de codigo, telefone e endereço. Um cliente possui deve possuir um único cadastro e o cadastro pertencer a somente um cliente. Além disso, será armazenado as informações sobre cada pedido relizado pelo cliente, sendo elas código, valor unitario de cada produto, quantidade de cada produto, complementos, frutas e calda. Um cliente poderá comprar vários ou nehnum produto e um produto poderá ser vendido para vários ou nenhum cliente. Um produduto possui código e tamanho, sendo que cada pedido possui um ou vários produtos e cada produto pertence a vários ou nenhum pedido. Para melhor supervisão, será armazenado nesse sistema as informações de cada  funcionário, ele possuirá nome, código, salário, data de contratação. Um funcioário realiza vários pedidos ou nenhum pedido e o pedido é realizado por apenas um funcionário.
+	Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada 		cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado as 	informações de codigo, telefone e endereço. Um cliente possui deve possuir um único cadastro e o cadastro pertencer a somente um 	 cliente. Além disso, será armazenado as informações sobre cada pedido relizado pelo cliente, sendo elas código, valor unitario de 	   cada produto, quantidade de cada produto, complementos, frutas e calda. Um cliente poderá comprar vários ou nehnum produto e um 	   produto poderá ser vendido para vários ou nenhum cliente. Um produduto possui código e tamanho, sendo que cada pedido possui um           ou vários produtos e cada produto pertence a vários ou nenhum pedido. Para melhor supervisão, será armazenado nesse sistema as 	    informações de cada  funcionário, ele possuirá nome, código, salário, data de contratação. Um funcioário realiza vários pedidos 	    ou nenhum pedido e o pedido é realizado por apenas um funcionário.
 
 
 ### 4.PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
@@ -30,23 +30,23 @@ Daianny Maria dadaymaria1@hotmail.com<br>
     
 > A Açaiteria "Açaifes" precisa inicialmente dos seguintes relatórios:
 
- * Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)<br>
+     	* Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)<br>
  
- * Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)<br>
+ 	* Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse 		pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)<br>
  
- *Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)<br>
+ 	* Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, 		quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)<br>
  
- * Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)<br>
+	 * Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)<br>
  
- * Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o pedido)
+	 * Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a 		quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o pedido)
 
 
 
  > informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)   
  
- * Cliente
- * Pedido
- * Produto
+ 	* Cliente
+ 	* Pedido
+ 	* Produto
     
  5. MODELO CONCEITUAL
     * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
@@ -61,25 +61,25 @@ D) Qualidade e Clareza
 > GRUPO 1: Camila,yasmim,Isabellay e Davi nunes<br> GRUPO 2: Eduardo, Paulo Cezar, Nycooly e Elisa<br>
 
 #### 5.2 Descrição dos dados 
-    > CLIENTE: Tabela que armazena as informações relativas ao cliente<br> 
-    > TELEFONE: Tabela que armazena o número de telefone de cada cliente e cada número tem um código<br> 
-    > PEDIDO: Tabela que armazena todas as informações de cada pedido feito por um cliente<br>
-    > ATENDENTE: Tabela que armazena as informações referida a cada atendente que monta o produto<br>
-    > MOTOBOY: Tabela que armazena as informações de cada motoboy que entrega o pedido<br>
-    > ENDERECO: Tabela referente ao endereço de cada Cliente<br>
-    > BAIRRO: Tabela que armazena o valor referente ao Bairro de cada Cliente<br>
-    > ESTADO: Tabela que armazena o valor referente ao Estado de cada Cliente<br>
-    > TIPO_LOGRADOURO: Tabela que armazena o tipo logradouro relacionado a cada Cliente<br>
-    > CIDADE: Tabela que armazena a cidade relacionada a cada cliente<br>
-    > PAGAMENTO: Tabela que armazena a forma de pagamento que cada cliente optou<br>
-    > PRODUTO: Tabela referente ao produto que foi escolhido por cada cliente<br>
-    > COMPLEMENTO: Tabela referente aos complementos de cada produto de cada cliente<br>
-    > FRUTA: Tabela referente a opção da fruta de cada produto de cada cliente<br>
-    > CALDA: Tabela referente a opção da calda de cada produto de cada cliente<br>
-    > PRODUTO_COMPLEMENTO: Relacionamento referente ao complemento e ao produto<br>
-    > PRODUTO_FRUTA: Relacionamento referente ao produto e a escolha da fruta<br>
-    >PRODUTO_CALDA: Relacionamento referente ao produto e a escolha da calda<br>
-    > PEDIDO_PRODUTO: Relacionamento referente ao pedido e o produto escolhido no pedido por cada cliente<br>
+    * CLIENTE: Tabela que armazena as informações relativas ao cliente<br> 
+    * TELEFONE: Tabela que armazena o número de telefone de cada cliente e cada número tem um código<br> 
+    * PEDIDO: Tabela que armazena todas as informações de cada pedido feito por um cliente<br>
+    * ATENDENTE: Tabela que armazena as informações referida a cada atendente que monta o produto<br>
+    * MOTOBOY: Tabela que armazena as informações de cada motoboy que entrega o pedido<br>
+    * ENDERECO: Tabela referente ao endereço de cada Cliente<br>
+    * BAIRRO: Tabela que armazena o valor referente ao Bairro de cada Cliente<br>
+    * ESTADO: Tabela que armazena o valor referente ao Estado de cada Cliente<br>
+    * TIPO_LOGRADOURO: Tabela que armazena o tipo logradouro relacionado a cada Cliente<br>
+    * CIDADE: Tabela que armazena a cidade relacionada a cada cliente<br>
+    * PAGAMENTO: Tabela que armazena a forma de pagamento que cada cliente optou<br>
+    * PRODUTO: Tabela referente ao produto que foi escolhido por cada cliente<br>
+    * COMPLEMENTO: Tabela referente aos complementos de cada produto de cada cliente<br>
+    * FRUTA: Tabela referente a opção da fruta de cada produto de cada cliente<br>
+    * CALDA: Tabela referente a opção da calda de cada produto de cada cliente<br>
+    * PRODUTO_COMPLEMENTO: Relacionamento referente ao complemento e ao produto<br>
+    * PRODUTO_FRUTA: Relacionamento referente ao produto e a escolha da fruta<br>
+    * PRODUTO_CALDA: Relacionamento referente ao produto e a escolha da calda<br>
+    * PEDIDO_PRODUTO: Relacionamento referente ao pedido e o produto escolhido no pedido por cada cliente<br>
 
 ### 6	MODELO LÓGICO
 ![image](https://user-images.githubusercontent.com/109684951/198706413-d59ead9d-5406-4c24-b6bc-ed5f56978403.png)
@@ -90,167 +90,167 @@ D) Qualidade e Clareza
 
 ### 7	MODELO FÍSICO<br>
 
-> DROP TABLE IF EXISTS TELEFONE;<br>
-CREATE TABLE TELEFONE (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    numero VARCHAR(25)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS CLIENTE;<br>
-CREATE TABLE CLIENTE (<br>
-    nome VARCHAR(255),<br>
-    cpf VARCHAR(25) PRIMARY KEY,<br>
-    FK_TELEFONE_codigo INTEGER,<br>
-	FOREIGN KEY (FK_TELEFONE_codigo)<br>
-    REFERENCES TELEFONE (codigo)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS ATENDENTE;<br>
-CREATE TABLE ATENDENTE (<br>
-    nome VARCHAR(255),<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    diaria FLOAT,<br>
-    qtd_dia INTEGER<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS MOTOBOY;<br>
-CREATE TABLE MOTOBOY (<br<
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255),<br>
-    diaria FLOAT,<br>
-    qtd_dia INTEGER<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS TIPO_LOGRADOURO;<br>
-CREATE TABLE TIPO_LOGRADOURO (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS BAIRRO;<br>
-CREATE TABLE BAIRRO (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255),<br>
-    taxa_entrega FLOAT<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS CIDADE;<br>
-CREATE TABLE CIDADE (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS ESTADO;<br>
-CREATE TABLE ESTADO (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255)<br>
-);<br>
+	DROP TABLE IF EXISTS TELEFONE;<br>
+	CREATE TABLE TELEFONE (<br>
+        	codigo INTEGER PRIMARY KEY,<br>
+    		numero VARCHAR(25)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS CLIENTE;<br>
+	CREATE TABLE CLIENTE (<br>
+    		nome VARCHAR(255),<br>
+    		cpf VARCHAR(25) PRIMARY KEY,<br>
+    		FK_TELEFONE_codigo INTEGER,<br>
+		FOREIGN KEY (FK_TELEFONE_codigo)<br>
+	    	REFERENCES TELEFONE (codigo)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS ATENDENTE;<br>
+	CREATE TABLE ATENDENTE (<br>
+    		nome VARCHAR(255),<br>
+    		codigo INTEGER PRIMARY KEY,<br>
+    		diaria FLOAT,<br>
+    		qtd_dia INTEGER<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS MOTOBOY;<br>
+	CREATE TABLE MOTOBOY (<br<
+    		codigo INTEGER PRIMARY KEY,<br>
+    		nome VARCHAR(255),<br>
+    		diaria FLOAT,<br>
+    		qtd_dia INTEGER<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS TIPO_LOGRADOURO;<br>
+	CREATE TABLE TIPO_LOGRADOURO (<br>
+    		codigo INTEGER PRIMARY KEY,<br>
+    		nome VARCHAR(255)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS BAIRRO;<br>
+	CREATE TABLE BAIRRO (<br>
+    		codigo INTEGER PRIMARY KEY,<br>
+    		nome VARCHAR(255),<br>
+    		taxa_entrega FLOAT<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS CIDADE;<br>
+	CREATE TABLE CIDADE (<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    nome VARCHAR(255)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS ESTADO;<br>
+	CREATE TABLE ESTADO (<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    nome VARCHAR(255)<br>
+	);<br>
 
-DROP TABLE IF EXISTS ENDERECO;<br>
-CREATE TABLE ENDERECO (<br>
-    cep VARCHAR(25),<br>
-    nome_logradouro VARCHAR(255),<br>
-    numero INTEGER,<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    FK_TIPO_LOGRADOURO_codigo INTEGER,<br>
-    FK_BAIRRO_codigo INTEGER,<br>
-    FK_CIDADE_codigo INTEGER,<br>
-    FK_ESTADO_codigo INTEGER,<br>
-    <br>
-	FOREIGN KEY (FK_TIPO_LOGRADOURO_codigo)<br>
-    REFERENCES TIPO_LOGRADOURO (codigo),<br>
-	FOREIGN KEY (FK_BAIRRO_codigo)<br>
-    REFERENCES BAIRRO (codigo),<br>
-	FOREIGN KEY (FK_CIDADE_codigo)<br>
-    REFERENCES CIDADE (codigo),<br>
-	FOREIGN KEY (FK_ESTADO_codigo)<br>
-    REFERENCES ESTADO (codigo)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS PAGAMENTO;<br>
-CREATE TABLE PAGAMENTO (<br>
-<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    forma_pagamento VARCHAR(255)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS PEDIDO;<br>
-CREATE TABLE PEDIDO (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    data_hora TIMESTAMP,<br>
-    valor_uni FLOAT,<br>
-    qtd_produto INTEGER,<br>
-    FK_CLIENTE_cpf VARCHAR(25),<br>
-    FK_ATENDENTE_codigo INTEGER,<br>
-    FK_ENDERECO_codigo INTEGER,<br>
-    FK_MOTOBOY_codigo INTEGER,<br>
-    FK_PAGAMENTO_codigo INTEGER,<br>
-	FOREIGN KEY (FK_CLIENTE_cpf)<br>
-    REFERENCES CLIENTE (cpf),<br>
-    <br>
-	FOREIGN KEY (FK_ATENDENTE_codigo)<br>
-    REFERENCES ATENDENTE (codigo),<br>
-	FOREIGN KEY (FK_ENDERECO_codigo)<br>
-    REFERENCES ENDERECO (codigo),<br>
-	FOREIGN KEY (FK_MOTOBOY_codigo)<br>
-    REFERENCES MOTOBOY (codigo),<br>
-	FOREIGN KEY (FK_PAGAMENTO_codigo)<br>
-    REFERENCES PAGAMENTO (codigo)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS PRODUTO;<br>
-CREATE TABLE PRODUTO (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    tamanho VARCHAR(25),<br>
-    FK_CALDA_codigo INTEGER<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS CALDA;<br>
-CREATE TABLE CALDA (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255)<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS FRUTA;<br>
-CREATE TABLE FRUTA (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255)<br>
-);<br>
+	DROP TABLE IF EXISTS ENDERECO;<br>
+	CREATE TABLE ENDERECO (<br>
+	    cep VARCHAR(25),<br>
+	    nome_logradouro VARCHAR(255),<br>
+	    numero INTEGER,<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    FK_TIPO_LOGRADOURO_codigo INTEGER,<br>
+	    FK_BAIRRO_codigo INTEGER,<br>
+	    FK_CIDADE_codigo INTEGER,<br>
+	    FK_ESTADO_codigo INTEGER,<br>
+	    <br>
+		FOREIGN KEY (FK_TIPO_LOGRADOURO_codigo)<br>
+	    REFERENCES TIPO_LOGRADOURO (codigo),<br>
+		FOREIGN KEY (FK_BAIRRO_codigo)<br>
+	    REFERENCES BAIRRO (codigo),<br>
+		FOREIGN KEY (FK_CIDADE_codigo)<br>
+	    REFERENCES CIDADE (codigo),<br>
+		FOREIGN KEY (FK_ESTADO_codigo)<br>
+	    REFERENCES ESTADO (codigo)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS PAGAMENTO;<br>
+	CREATE TABLE PAGAMENTO (<br>
+	<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    forma_pagamento VARCHAR(255)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS PEDIDO;<br>
+	CREATE TABLE PEDIDO (<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    data_hora TIMESTAMP,<br>
+	    valor_uni FLOAT,<br>
+	    qtd_produto INTEGER,<br>
+	    FK_CLIENTE_cpf VARCHAR(25),<br>
+	    FK_ATENDENTE_codigo INTEGER,<br>
+	    FK_ENDERECO_codigo INTEGER,<br>
+	    FK_MOTOBOY_codigo INTEGER,<br>
+	    FK_PAGAMENTO_codigo INTEGER,<br>
+		FOREIGN KEY (FK_CLIENTE_cpf)<br>
+	    REFERENCES CLIENTE (cpf),<br>
+	    <br>
+		FOREIGN KEY (FK_ATENDENTE_codigo)<br>
+	    REFERENCES ATENDENTE (codigo),<br>
+		FOREIGN KEY (FK_ENDERECO_codigo)<br>
+	    REFERENCES ENDERECO (codigo),<br>
+		FOREIGN KEY (FK_MOTOBOY_codigo)<br>
+	    REFERENCES MOTOBOY (codigo),<br>
+		FOREIGN KEY (FK_PAGAMENTO_codigo)<br>
+	    REFERENCES PAGAMENTO (codigo)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS PRODUTO;<br>
+	CREATE TABLE PRODUTO (<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    tamanho VARCHAR(25),<br>
+	    FK_CALDA_codigo INTEGER<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS CALDA;<br>
+	CREATE TABLE CALDA (<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    nome VARCHAR(255)<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS FRUTA;<br>
+	CREATE TABLE FRUTA (<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    nome VARCHAR(255)<br>
+	);<br>
 
-DROP TABLE IF EXISTS COMPLEMENTO;<br>
-CREATE TABLE COMPLEMENTO (<br>
-    codigo INTEGER PRIMARY KEY,<br>
-    nome VARCHAR(255)<br>
-);<br>
+	DROP TABLE IF EXISTS COMPLEMENTO;<br>
+	CREATE TABLE COMPLEMENTO (<br>
+	    codigo INTEGER PRIMARY KEY,<br>
+	    nome VARCHAR(255)<br>
+	);<br>
 
-DROP TABLE IF EXISTS PRODUTO_FRUTA;<br>
-CREATE TABLE PRODUTO_FRUTA (<br>
-    fk_FRUTA_codigo INTEGER,<br>
-    fk_PRODUTO_codigo INTEGER<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS PRODUTO_COMPLEMENTO;<br>
-CREATE TABLE PRODUTO_COMPLEMENTO (<br>
-    fk_PRODUTO_codigo INTEGER,<br>
-    fk_COMPLEMENTO_codigo INTEGER<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS PRODUTO_CALDA;<br>
-CREATE TABLE PRODUTO_CALDA<br>
-    fk_CALDA_codigo INTEGER,<br>
-    fk_PRODUTO_codigo INTEGER<br>
-);<br>
-<br>
-DROP TABLE IF EXISTS PEDIDO_PRODUTO;<br>
-CREATE TABLE PEDIDO_PRODUTO (<br>
-    fk_PRODUTO_codigo INTEGER,<br>
-    fk_PEDIDO_codigo INTEGER,<br>
-	FOREIGN KEY (fk_PRODUTO_codigo)<br>
-    REFERENCES PRODUTO (codigo),<br>
-	FOREIGN KEY (fk_PEDIDO_codigo)
-    REFERENCES PEDIDO (codigo)<br>
-);<br>
-<br>
+	DROP TABLE IF EXISTS PRODUTO_FRUTA;<br>
+	CREATE TABLE PRODUTO_FRUTA (<br>
+	    fk_FRUTA_codigo INTEGER,<br>
+	    fk_PRODUTO_codigo INTEGER<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS PRODUTO_COMPLEMENTO;<br>
+	CREATE TABLE PRODUTO_COMPLEMENTO (<br>
+	    fk_PRODUTO_codigo INTEGER,<br>
+	    fk_COMPLEMENTO_codigo INTEGER<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS PRODUTO_CALDA;<br>
+	CREATE TABLE PRODUTO_CALDA<br>
+	    fk_CALDA_codigo INTEGER,<br>
+	    fk_PRODUTO_codigo INTEGER<br>
+	);<br>
+	<br>
+	DROP TABLE IF EXISTS PEDIDO_PRODUTO;<br>
+	CREATE TABLE PEDIDO_PRODUTO (<br>
+	    fk_PRODUTO_codigo INTEGER,<br>
+	    fk_PEDIDO_codigo INTEGER,<br>
+		FOREIGN KEY (fk_PRODUTO_codigo)<br>
+	    REFERENCES PRODUTO (codigo),<br>
+		FOREIGN KEY (fk_PEDIDO_codigo)
+	    REFERENCES PEDIDO (codigo)<br>
+	);<br>
+	<br>
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
