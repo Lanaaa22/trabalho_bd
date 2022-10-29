@@ -4,7 +4,7 @@ Trabalho desenvolvido durante a disciplina de Banco de dados
 # Sumário
 
 ### 1. COMPONENTES<br>
-Integrantes do grupo<br>
+> Integrantes do grupo<br>
 Ilanna dos Reis Cardoso cardosoilanna96@gmail.com<br>
 Mariana Lopes marianalopesgovea@gmail.com<br>
 Bruna Ramos Rocha brunaramosrocha72@gmail.com<br>
@@ -13,14 +13,15 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO
 
-	A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto<br>		Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que 		desde<br> o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em 	nenhuma<br> hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos. Para 	que as aplicações<br> sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode ser feito o 		controle<br> dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais 	produtos<br> e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao 			proprietário,vizamos<br> essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o 	responsável e assim corrigí-las de<br> maneira mais direta e controle também da data de contratação e etc deste pois entendemos 	que é muito mais provável alcançar o<br> sucesso se houver uma equipe unida e organizada.<br>
-	--------Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso-----(frase<br> motivacional necessária para que o empresário insira aos funcionários um controle de modo que os mesmos aceitem como algo bom e não como<br> uma vigilancia constante e assim o cumpram com mais amor )----------<br>
+> A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto		Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que 		desde o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em nenhuma hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos. Para que as aplicações sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode ser feito o controle dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais 	produtos<br> e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao proprietário,vizamos essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o responsável e assim corrigí-las de<br> maneira mais direta e controle também da data de contratação e etc deste pois entendemos que é muito mais provável alcançar o<br> sucesso se houver uma equipe unida e organizada.
+
+--------Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso-----(frase motivacional necessária para que o empresário insira aos funcionários um controle de modo que os mesmos aceitem como algo bom e não como uma vigilancia constante e assim o cumpram com mais amor )----------
 
  
 
 ### 3.MINI-MUNDO<br>
 
-	Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada<br>		cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado 		as<br> 	informações de codigo, telefone e endereço. Um cliente possui deve possuir um único cadastro e o cadastro pertencer a 		somente<br> um cliente. Além disso, será armazenado as informações sobre cada pedido relizado pelo cliente, sendo elas código, 		valor<br> unitario de cada produto, quantidade de cada produto, complementos, frutas e calda. Um cliente poderá comprar vários 		ou<br> nehnum produto e um produto poderá ser vendido para vários ou nenhum cliente. Um produduto possui código e tamanho, sendo 	 que cada<br> pedido possui um ou vários produtos e cada produto pertence a vários ou nenhum pedido. Para melhor supervisão, 		será<br> armazenado nesse sistema as informações de cada  funcionário, ele possuirá nome, código, salário, data de contratação.		<br> Um funcionário realiza vários pedidos ou nenhum pedido e o pedido é realizado por apenas um funcionário.<br>
+> Em uma açaiteria chamada "Açaifes" o dono deseja criar um sistema para melhor controle de seu delivery. Nesse sistema cada		cliente possuirá um cadastro, para isso será armazenado as informações do cliente de nome e cpf. Do cadastro será armazenado 		as informações de codigo, telefone e endereço. Um cliente possui deve possuir um único cadastro e o cadastro pertencer a 		somente um cliente. Além disso, será armazenado as informações sobre cada pedido relizado pelo cliente, sendo elas código, 		valor unitario de cada produto, quantidade de cada produto, complementos, frutas e calda. Um cliente poderá comprar vários 		ou nehnum produto e um produto poderá ser vendido para vários ou nenhum cliente. Um produduto possui código e tamanho, sendo que cada pedido possui um ou vários produtos e cada produto pertence a vários ou nenhum pedido. Para melhor supervisão, será armazenado nesse sistema as informações de cada  funcionário, ele possuirá nome, código, salário, data de contratação. Um funcionário realiza vários pedidos ou nenhum pedido e o pedido é realizado por apenas um funcionário.
 
 
 ### 4.PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
@@ -30,23 +31,23 @@ Daianny Maria dadaymaria1@hotmail.com<br>
     
 > A Açaiteria "Açaifes" precisa inicialmente dos seguintes relatórios:
 
-     	* Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)<br>
- 
- 	* Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse 		pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)<br>
- 
- 	* Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, 		quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)<br>
- 
-	 * Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)<br>
- 
-	 * Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a 		quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o pedido)
+* Relatório que mostre o valor total do pedido de cada cliente. (informação útil p/ o cliente e o açaí)<br>
+
+* Relatório que traga o código de todos os pedidos realizados por cada funcionário e o código do cliente responsável por esse 		pedido.(útil p/ o dono do açaí caso ocorra erros nos pedidos)<br>
+
+* Relatório que mostre para cada cliente as informações sobre seu pedido, sendo elas o tamanho, complemento, calda, fruta, 		quantidade e data_hora que realizou o pedido. (útil p/ o funcionário que realizará o pedido)<br>
+
+ * Relatório com os dados de cada cliente sobre: endereço e telefone (útil p/ o motoboy)<br>
+
+ * Relatório de obtenha a quantidade de pedidos por bairro, quantidade de pedidos realizados para cada tamanho de acaí e a 		quantidade de pedidos por cada forma de pagamento. (útil p/ controle do dono sobre o pedido)
 
 
 
  > informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)   
  
- 	* Cliente<br>
- 	* Pedido<br>
- 	* Produto<br>
+ 	* Cliente
+ 	* Pedido
+ 	* Produto
     
  5. MODELO CONCEITUAL
     * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
