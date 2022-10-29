@@ -49,7 +49,7 @@ Daianny Maria dadaymaria1@hotmail.com<br>
  	* Pedido
  	* Produto
     
- . MODELO CONCEITUAL
+ ### MODELO CONCEITUAL
  ![image](https://user-images.githubusercontent.com/109684951/198835219-9eb528e4-cd67-45ca-ae6b-1e9e501b2154.png)
 
         
@@ -58,25 +58,22 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 > GRUPO 1: Camila,yasmim,Isabellay e Davi nunes<br> GRUPO 2: Eduardo, Paulo Cezar, Nycooly e Elisa<br>
 
 #### 5.2 Descrição dos dados 
-    * CLIENTE: Tabela que armazena as informações relativas ao cliente<br> 
-    * TELEFONE: Tabela que armazena o número de telefone de cada cliente e cada número tem um código<br> 
-    * PEDIDO: Tabela que armazena todas as informações de cada pedido feito por um cliente<br>
-    * ATENDENTE: Tabela que armazena as informações referida a cada atendente que monta o produto<br>
-    * MOTOBOY: Tabela que armazena as informações de cada motoboy que entrega o pedido<br>
-    * ENDERECO: Tabela referente ao endereço de cada Cliente<br>
-    * BAIRRO: Tabela que armazena o valor referente ao Bairro de cada Cliente<br>
-    * ESTADO: Tabela que armazena o valor referente ao Estado de cada Cliente<br>
-    * TIPO_LOGRADOURO: Tabela que armazena o tipo logradouro relacionado a cada Cliente<br>
-    * CIDADE: Tabela que armazena a cidade relacionada a cada cliente<br>
-    * PAGAMENTO: Tabela que armazena a forma de pagamento que cada cliente optou<br>
-    * PRODUTO: Tabela referente ao produto que foi escolhido por cada cliente<br>
-    * COMPLEMENTO: Tabela referente aos complementos de cada produto de cada cliente<br>
-    * FRUTA: Tabela referente a opção da fruta de cada produto de cada cliente<br>
-    * CALDA: Tabela referente a opção da calda de cada produto de cada cliente<br>
-    * PRODUTO_COMPLEMENTO: Relacionamento referente ao complemento e ao produto<br>
-    * PRODUTO_FRUTA: Relacionamento referente ao produto e a escolha da fruta<br>
-    * PRODUTO_CALDA: Relacionamento referente ao produto e a escolha da calda<br>
-    * PEDIDO_PRODUTO: Relacionamento referente ao pedido e o produto escolhido no pedido por cada cliente<br>
+* CLIENTE: Tabela que armazena as informações relativas ao cliente<br> 
+* TELEFONE: Tabela que armazena o número de telefone de cada cliente e cada número tem um código<br> 
+* PEDIDO: Tabela que armazena todas as informações de cada pedido feito por um cliente<br>
+* ATENDENTE: Tabela que armazena as informações referida a cada atendente que monta o produto<br>
+* MOTOBOY: Tabela que armazena as informações de cada motoboy que entrega o pedido<br>
+* ENDERECO: Tabela referente ao endereço de cada Cliente<br>
+* BAIRRO: Tabela que armazena o valor referente ao Bairro de cada Cliente<br>
+* ESTADO: Tabela que armazena o valor referente ao Estado de cada Cliente<br>
+* TIPO_LOGRADOURO: Tabela que armazena o tipo logradouro relacionado a cada Cliente<br>
+* CIDADE: Tabela que armazena a cidade relacionada a cada cliente<br>
+* PAGAMENTO: Tabela que armazena a forma de pagamento que cada cliente optou<br>
+* PRODUTO: Tabela referente ao produto que foi escolhido por cada cliente<br>
+* COMPLEMENTO: Tabela referente ao complemento do pedido de cada cliente<br>
+* FRUTA: Tabela referente a opção da fruta do pedido de cada cliente<br>
+* CALDA: Tabela referente a opção da calda do pedido de cada cliente<br>
+* PEDIDO_PRODUTO: Relacionamento referente ao pedido e o produto escolhido no pedido por cada cliente<br>
 
 ### 6	MODELO LÓGICO
 ![image](https://user-images.githubusercontent.com/109684951/198706413-d59ead9d-5406-4c24-b6bc-ed5f56978403.png)
@@ -87,182 +84,357 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
 ### 7	MODELO FÍSICO<br>
 
-	DROP TABLE IF EXISTS TELEFONE;<br>
-	CREATE TABLE TELEFONE (<br>
-        	codigo INTEGER PRIMARY KEY,<br>
-    		numero VARCHAR(25)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS CLIENTE;<br>
-	CREATE TABLE CLIENTE (<br>
-    		nome VARCHAR(255),<br>
-    		cpf VARCHAR(25) PRIMARY KEY,<br>
-    		FK_TELEFONE_codigo INTEGER,<br>
-		FOREIGN KEY (FK_TELEFONE_codigo)<br>
-	    	REFERENCES TELEFONE (codigo)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS ATENDENTE;<br>
-	CREATE TABLE ATENDENTE (<br>
-    		nome VARCHAR(255),<br>
-    		codigo INTEGER PRIMARY KEY,<br>
-    		diaria FLOAT,<br>
-    		qtd_dia INTEGER<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS MOTOBOY;<br>
-	CREATE TABLE MOTOBOY (<br<
-    		codigo INTEGER PRIMARY KEY,<br>
-    		nome VARCHAR(255),<br>
-    		diaria FLOAT,<br>
-    		qtd_dia INTEGER<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS TIPO_LOGRADOURO;<br>
-	CREATE TABLE TIPO_LOGRADOURO (<br>
-    		codigo INTEGER PRIMARY KEY,<br>
-    		nome VARCHAR(255)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS BAIRRO;<br>
-	CREATE TABLE BAIRRO (<br>
-    		codigo INTEGER PRIMARY KEY,<br>
-    		nome VARCHAR(255),<br>
-    		taxa_entrega FLOAT<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS CIDADE;<br>
-	CREATE TABLE CIDADE (<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    nome VARCHAR(255)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS ESTADO;<br>
-	CREATE TABLE ESTADO (<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    nome VARCHAR(255)<br>
-	);<br>
+	
+	DROP TABLE TELEFONE, CLIENTE, ATENDENTE, MOTOBOY, TIPO_LOGRADOURO,BAIRRO,CIDADE,ESTADO,ENDERECO,PAGAMENTO,CALDA,FRUTA,COMPLEMENTO,PEDIDO,PRODUTO,PEDIDO_PRODUTO;
 
-	DROP TABLE IF EXISTS ENDERECO;<br>
-	CREATE TABLE ENDERECO (<br>
-	    cep VARCHAR(25),<br>
-	    nome_logradouro VARCHAR(255),<br>
-	    numero INTEGER,<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    FK_TIPO_LOGRADOURO_codigo INTEGER,<br>
-	    FK_BAIRRO_codigo INTEGER,<br>
-	    FK_CIDADE_codigo INTEGER,<br>
-	    FK_ESTADO_codigo INTEGER,<br>
-	    <br>
-		FOREIGN KEY (FK_TIPO_LOGRADOURO_codigo)<br>
-	    REFERENCES TIPO_LOGRADOURO (codigo),<br>
-		FOREIGN KEY (FK_BAIRRO_codigo)<br>
-	    REFERENCES BAIRRO (codigo),<br>
-		FOREIGN KEY (FK_CIDADE_codigo)<br>
-	    REFERENCES CIDADE (codigo),<br>
-		FOREIGN KEY (FK_ESTADO_codigo)<br>
-	    REFERENCES ESTADO (codigo)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS PAGAMENTO;<br>
-	CREATE TABLE PAGAMENTO (<br>
-	<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    forma_pagamento VARCHAR(255)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS PEDIDO;<br>
-	CREATE TABLE PEDIDO (<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    data_hora TIMESTAMP,<br>
-	    valor_uni FLOAT,<br>
-	    qtd_produto INTEGER,<br>
-	    FK_CLIENTE_cpf VARCHAR(25),<br>
-	    FK_ATENDENTE_codigo INTEGER,<br>
-	    FK_ENDERECO_codigo INTEGER,<br>
-	    FK_MOTOBOY_codigo INTEGER,<br>
-	    FK_PAGAMENTO_codigo INTEGER,<br>
-		FOREIGN KEY (FK_CLIENTE_cpf)<br>
-	    REFERENCES CLIENTE (cpf),<br>
-	    <br>
-		FOREIGN KEY (FK_ATENDENTE_codigo)<br>
-	    REFERENCES ATENDENTE (codigo),<br>
-		FOREIGN KEY (FK_ENDERECO_codigo)<br>
-	    REFERENCES ENDERECO (codigo),<br>
-		FOREIGN KEY (FK_MOTOBOY_codigo)<br>
-	    REFERENCES MOTOBOY (codigo),<br>
-		FOREIGN KEY (FK_PAGAMENTO_codigo)<br>
-	    REFERENCES PAGAMENTO (codigo)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS PRODUTO;<br>
-	CREATE TABLE PRODUTO (<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    tamanho VARCHAR(25),<br>
-	    FK_CALDA_codigo INTEGER<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS CALDA;<br>
-	CREATE TABLE CALDA (<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    nome VARCHAR(255)<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS FRUTA;<br>
-	CREATE TABLE FRUTA (<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    nome VARCHAR(255)<br>
-	);<br>
+	DROP TABLE IF EXISTS TELEFONE;
+	CREATE TABLE TELEFONE(
+	codigo INTEGER PRIMARY KEY,
+	numero VARCHAR(25)
+	);
 
-	DROP TABLE IF EXISTS COMPLEMENTO;<br>
-	CREATE TABLE COMPLEMENTO (<br>
-	    codigo INTEGER PRIMARY KEY,<br>
-	    nome VARCHAR(255)<br>
-	);<br>
+	DROP TABLE IF EXISTS CLIENTE;
+	CREATE TABLE CLIENTE (
+	nome VARCHAR(255),
+	cpf VARCHAR(25) PRIMARY KEY,
+	FK_TELEFONE_codigo INTEGER,
+	FOREIGN KEY (FK_TELEFONE_codigo)
+	REFERENCES TELEFONE (codigo)
+	);
 
-	DROP TABLE IF EXISTS PRODUTO_FRUTA;<br>
-	CREATE TABLE PRODUTO_FRUTA (<br>
-	    fk_FRUTA_codigo INTEGER,<br>
-	    fk_PRODUTO_codigo INTEGER<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS PRODUTO_COMPLEMENTO;<br>
-	CREATE TABLE PRODUTO_COMPLEMENTO (<br>
-	    fk_PRODUTO_codigo INTEGER,<br>
-	    fk_COMPLEMENTO_codigo INTEGER<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS PRODUTO_CALDA;<br>
-	CREATE TABLE PRODUTO_CALDA<br>
-	    fk_CALDA_codigo INTEGER,<br>
-	    fk_PRODUTO_codigo INTEGER<br>
-	);<br>
-	<br>
-	DROP TABLE IF EXISTS PEDIDO_PRODUTO;<br>
-	CREATE TABLE PEDIDO_PRODUTO (<br>
-	    fk_PRODUTO_codigo INTEGER,<br>
-	    fk_PEDIDO_codigo INTEGER,<br>
-		FOREIGN KEY (fk_PRODUTO_codigo)<br>
-	    REFERENCES PRODUTO (codigo),<br>
-		FOREIGN KEY (fk_PEDIDO_codigo)
-	    REFERENCES PEDIDO (codigo)<br>
-	);<br>
-	<br>
-        
-       
+	DROP TABLE IF EXISTS ATENDENTE;
+	CREATE TABLE ATENDENTE (
+	nome VARCHAR(255),
+	codigo INTEGER PRIMARY KEY,
+	diaria FLOAT,
+	qtd_dia INTEGER
+	);
+
+	DROP TABLE IF EXISTS MOTOBOY;
+	CREATE TABLE MOTOBOY (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255),
+	diaria FLOAT,
+	qtd_dia INTEGER
+	);
+
+	DROP TABLE IF EXISTS TIPO_LOGRADOURO;
+	CREATE TABLE TIPO_LOGRADOURO (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255)
+	);
+
+	DROP TABLE IF EXISTS BAIRRO;
+	CREATE TABLE BAIRRO (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255),
+	taxa_entrega FLOAT
+	);
+
+	DROP TABLE IF EXISTS CIDADE;
+	CREATE TABLE CIDADE (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255)
+	);
+
+	DROP TABLE IF EXISTS ESTADO;
+	CREATE TABLE ESTADO (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255)
+	);
+
+	DROP TABLE IF EXISTS ENDERECO;
+	CREATE TABLE ENDERECO (
+	cep VARCHAR(25),
+	nome_logradouro VARCHAR(255),
+	numero INTEGER,
+	codigo INTEGER PRIMARY KEY,
+	FK_TIPO_LOGRADOURO_codigo INTEGER,
+	FK_BAIRRO_codigo INTEGER,
+	FK_CIDADE_codigo INTEGER,
+	FK_ESTADO_codigo INTEGER,
+	FOREIGN KEY (FK_TIPO_LOGRADOURO_codigo)
+	REFERENCES TIPO_LOGRADOURO (codigo),
+	FOREIGN KEY (FK_BAIRRO_codigo)
+	REFERENCES BAIRRO (codigo),
+	FOREIGN KEY (FK_CIDADE_codigo)
+	REFERENCES CIDADE (codigo),
+	FOREIGN KEY (FK_ESTADO_codigo)
+	REFERENCES ESTADO (codigo)
+	);
+
+	DROP TABLE IF EXISTS PAGAMENTO;
+	CREATE TABLE PAGAMENTO (
+	codigo INTEGER PRIMARY KEY,
+	forma_pagamento VARCHAR(255)
+	);
+
+	DROP TABLE IF EXISTS CALDA;
+	CREATE TABLE CALDA (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255)
+	);
+
+	DROP TABLE IF EXISTS FRUTA;
+	CREATE TABLE FRUTA (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255)
+	);
+
+	DROP TABLE IF EXISTS COMPLEMENTO;
+	CREATE TABLE COMPLEMENTO (
+	codigo INTEGER PRIMARY KEY,
+	nome VARCHAR(255)
+	);
+
+
+	DROP TABLE IF EXISTS PEDIDO;
+	CREATE TABLE PEDIDO (
+	codigo INTEGER PRIMARY KEY,
+	data_hora TIMESTAMP,
+	valor_uni FLOAT,
+	qtd_produto INTEGER,
+	FK_CLIENTE_cpf VARCHAR(25),
+	FK_ATENDENTE_codigo INTEGER,
+	FK_ENDERECO_codigo INTEGER,
+	FK_MOTOBOY_codigo INTEGER,
+	FK_PAGAMENTO_codigo INTEGER,
+	FK_CALDA_codigo INTEGER,
+	FK_FRUTA_codigo INTEGER, 
+	FK_COMPLEMENTO_codigo INTEGER,
+	FOREIGN KEY (FK_CLIENTE_cpf)
+	REFERENCES CLIENTE (cpf),
+	FOREIGN KEY (FK_ATENDENTE_codigo)
+	REFERENCES ATENDENTE (codigo),
+	FOREIGN KEY (FK_ENDERECO_codigo)
+	REFERENCES ENDERECO (codigo),
+	FOREIGN KEY (FK_MOTOBOY_codigo)
+	REFERENCES MOTOBOY (codigo),
+	FOREIGN KEY (FK_PAGAMENTO_codigo)
+	REFERENCES PAGAMENTO (codigo),
+	FOREIGN KEY (FK_CALDA_codigo)
+	REFERENCES CALDA (codigo),
+	FOREIGN KEY (FK_FRUTA_codigo)
+	REFERENCES FRUTA (codigo),
+	FOREIGN KEY (FK_COMPLEMENTO_codigo)
+	REFERENCES COMPLEMENTO (codigo)
+	);
+
+
+	DROP TABLE IF EXISTS PRODUTO;
+	CREATE TABLE PRODUTO (
+	codigo INTEGER PRIMARY KEY,
+	tamanho VARCHAR(25)
+	);
+
+	DROP TABLE IF EXISTS PEDIDO_PRODUTO;
+	CREATE TABLE PEDIDO_PRODUTO (
+	fk_PRODUTO_codigo INTEGER,
+	fk_PEDIDO_codigo INTEGER,
+	FOREIGN KEY (fk_PRODUTO_codigo)
+	REFERENCES PRODUTO (codigo),
+	FOREIGN KEY (fk_PEDIDO_codigo)
+	REFERENCES PEDIDO (codigo)
+	);
+
+
+           
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+        
+	insert into telefone(codigo, numero)
+	values(1,'(27)3242-6439'),
+	(2, '(27) 3419-5155'),
+	(3, '(27) 2250-6347'),
+	(4, '(27) 3769-9583'),
+	(5, '(27) 3304-4261'),
+	(6, '(27) 2332-2719'),
+	(7, '(27) 3750-9836'),
+	(8, '(27) 2725-2842'),
+	(9, '(27) 2854-2690'),
+	(10, '(27) 2785-4410');
+
+	select * from telefone;
+
+	insert into cliente(nome, cpf, FK_TELEFONE_codigo)
+	values ('Gustavo', '230.149.108-05', 1),
+	('Eduarda', '072.424.817-02', 2),
+	('Maria', '019.082.980-06', 3),
+	('Luiz', '024.325.400-01', 4),
+	('Roberto', '513-245.701-03', 5),
+	('Fernando', '234.167.398-84', 6),
+	('Vitória', '009.449.081-36', 7),
+	('Carlos', '529.982.247-26', 8),
+	('Fábiana', '570.415.611-05', 9),
+	('Marcos', '425.863.098-32', 10);
+
+	select * from cliente;
+
+	insert into atendente(nome, codigo, diaria, qtd_dia)
+	values ('Henrique', 10, 50.00, 5),
+	('Davi', 20, 60.00, 4),
+	('Lorena', 30, 50.00, 6),
+	('Sthephany', 40, 70.00, 5),
+	('Valter', 50, 50.00, 3),
+	('Valéria', 60, 60.00, 4);
+
+	select * from atendente;
+
+	insert into motoboy(codigo, nome, diaria, qtd_dia)
+	values(70, 'Roberto', 50.00, 4),
+	(80, 'Samuel', 50.00, 5),
+	(90, 'Carlos', 50.00, 4),
+	(100, 'Paulo', 50.00, 5);
+
+	select * from motoboy;
+
+	insert into tipo_logradouro(codigo, nome)
+	values(11, 'Rua'),
+	(12, 'Rodovia'),
+	(13, 'Avenida'),
+	(14, 'Residencial');
+
+	select * from tipo_logradouro;
+
+	insert into bairro(codigo, nome, taxa_entrega)
+	values(31, 'São Pedro', 10.00),
+	(32, 'Grande Vitória', 8.00),
+	(33, 'Jacaraípe', 5.00),
+	(34, 'São Francisco', 6.00),
+	(35, 'Morada de Laranjeiras', 4.00),
+	(36, 'Jardim Limoeiro', 7.00);
+
+	select * from bairro;
+
+	insert into cidade(codigo, nome)
+	values(21, 'Vitória'),
+	(22, 'Serra');
+
+	select * from cidade;
+
+	insert into estado(codigo, nome)
+	values(23, 'Espírito Santo');
+
+	select * from estado;
+
+	insert into endereco (cep, nome_logradouro, numero, codigo, FK_TIPO_LOGRADOURO_codigo, FK_BAIRRO_codigo, FK_CIDADE_codigo, FK_ESTADO_codigo)
+	values ('29024-043', '21 de Novembro', 1110, 51, 11, 31, 21, 23),
+	('29984-023', 'Serafim Derenze', 2213, 52, 12, 32,  21, 23),
+	('29876-865', 'Abdo Saad', 5333, 53, 13, 33, 22, 23),
+	('29446-048', 'Encanto das Ostras', 4921, 54, 14, 34, 22, 23),
+	('29764-958', '22 de Novembro', 6235, 55, 11, 31, 21, 23),
+	('29473-764', 'Das Jandaias', 1267, 56, 11, 35, 22, 23),
+	('29745-140', 'dos Colibris', 354, 57, 13, 35, 22, 23),
+	('29465-434', 'Vila Sol', 6077, 58, 14, 35, 22, 23),
+	('29435-724', 'Atlântica', 56445, 59, 13, 35, 22, 23),
+	('29862-867', 'Gardenia', 8788, 50, 11, 36, 22, 23);
+
+	select * from endereco;
+
+	insert into pagamento(codigo, forma_pagamento)
+	values(61, 'cartão'),
+	(62, 'dinheiro'),
+	(63, 'pix'),
+	(64, 'Pic Pay');
+
+	select * from pagamento;
+
+	insert into calda(codigo, nome)
+	values (71, 'Leite Condensado'),
+	(72, 'Caramelo'),
+	(73, 'Mel'),
+	(74, 'Chocolate'),
+	(75, 'Menta'),
+	(76, 'Doce de leite'),
+	(77, 'Morango');
+
+	select * from calda;
+
+	insert into fruta(codigo, nome)
+	values (81, 'Banana'),
+	(82, 'Abacaxi'),
+	(83, 'Kiwi'),
+	(84, 'Manga'),
+	(85, 'Morango');
+
+	select * from fruta;
+
+	insert into complemento(codigo, nome)
+	values (91, 'Leite em pó'),
+	(92, 'Paçoca'),
+	(93, 'Amendoim'),
+	(94, 'Shocobow'),
+	(95, 'Sucrilhos'),
+	(96, 'Ovomaltine'),
+	(97, 'Granola'),
+	(98, 'Disquete');
+
+	select * from complemento;
+
+	insert into pedido (codigo, data_hora, valor_uni, qtd_produto, FK_CLIENTE_cpf, FK_ATENDENTE_codigo, FK_ENDERECO_codigo, FK_MOTOBOY_codigo, FK_PAGAMENTO_codigo, FK_CALDA_codigo, FK_FRUTA_codigo, FK_COMPLEMENTO_codigo)
+	values (151, '2022-06-03 07:04:21', 13.00, 5, '425.863.098-32', 10, 51, 70, 61, 71, 81, 91),
+	(152, '2022-04-01 01:07:22', 15.00, 3, '570.415.611-05', 20, 52, 80, 62, 72, 82, 92),
+	(153, '2022-06-07 07:06:01', 18.00, 3, '529.982.247-26', 30, 53, 90, 63, 73, 83, 93),
+	(154, '2022-04-12 03:05:03', 23.00, 1, '009.449.081-36', 40, 54, 100, 64, 74, 84, 94),
+	(155, '2022-03-03 09:08:21', 13.00, 4, '234.167.398-84', 50, 55, 70, 61, 75, 85, 95),
+	(156, '2022-12-05 04:01:12', 15.00, 2, '513-245.701-03', 60, 56, 80, 62, 76, 81, 96),
+	(157, '2022-11-12 05:08:04', 18.00, 5, '024.325.400-01', 10, 57, 90, 63, 77, 82, 97),
+	(158, '2022-10-04 03:05:06', 23.00, 2, '019.082.980-06', 20, 58, 100, 64, 71, 83, 98),
+	(159, '2022-03-02 15:02:07', 13.00, 7, '072.424.817-02', 30, 59, 70, 61, 72, 84, 91),
+	(160, '2022-09-22 04:45:32', 15.00, 6, '230.149.108-05', 40, 50, 80, 62, 73, 85, 92),
+	(161, '2022-06-03 07:04:21', 13.00, 5, '425.863.098-32', 10, 51, 70, 61, 74, 81, 93),
+	(162, '2022-04-01 01:07:22', 15.00, 3, '570.415.611-05', 20, 52, 80, 62, 75, 82, 94),
+	(163, '2022-06-07 07:06:01', 18.00, 3, '529.982.247-26', 30, 53, 90, 63, 76, 83, 95),
+	(164, '2022-04-12 03:05:03', 23.00, 1, '009.449.081-36', 40, 54, 100, 64, 77, 84, 96),
+	(165, '2022-03-03 09:08:21', 13.00, 4, '234.167.398-84', 50, 55, 70, 61, 71, 85, 97),
+	(166, '2022-12-05 04:01:12', 15.00, 2, '513-245.701-03', 60, 56, 80, 62, 72, 81, 98),
+	(167, '2022-11-12 05:08:04', 18.00, 5, '024.325.400-01', 10, 57, 90, 63, 73, 82, 91),
+	(168, '2022-10-04 03:05:06', 23.00, 2, '019.082.980-06', 20, 58, 100, 64, 74, 83, 92),
+	(169, '2022-03-02 15:02:07', 13.00, 7, '072.424.817-02', 30, 59, 70, 61, 75, 84, 93);
+
+	select * from pedido;
+
+	insert into produto(codigo, tamanho)
+	values (001, '300ml'),
+	(002, '500ml'),
+	(003, '700ml'),
+	(004, '1l');
+
+	select * from produto;
+
+	insert into pedido_produto(fk_PRODUTO_codigo, fk_PEDIDO_codigo)
+	values(001, 151),
+	(002, 151),
+	(003, 152),
+	(004, 152),
+	(001, 153),
+	(002, 154),
+	(003, 155),
+	(004, 155),
+	(001, 155),
+	(002, 156),
+	(003, 157),
+	(004, 158),
+	(001, 159),
+	(002, 160),
+	(003, 161),
+	(004, 162),
+	(001, 162),
+	(002, 163),
+	(003, 164),
+	(004, 164),
+	(001, 165),
+	(002, 165),
+	(003, 165),
+	(004, 166),
+	(001, 167),
+	(002, 168),
+	(003, 169);
+
+	select * from pedido_produto; 
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Usar o colab para apresentar os resultados que devem incluir as instruções SQL + resultados em forma de tabela.<br>
-    
-    LINK DO COLAB: https://colab.research.google.com/drive/1TnGEAMw-GhBKL_J_CNiLCnEioEFcl8vr?usp=sharing
-#### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+	LINK DO COLAB: https://colab.research.google.com/drive/1TnGEAMw-GhBKL_J_CNiLCnEioEFcl8vr?usp=sharing
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
