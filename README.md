@@ -14,8 +14,7 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 ### 2.INTRODUÇÃO E MOTIVAÇÃO
 
 > A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto		Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que 		desde o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em nenhuma hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos. Para que as aplicações sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode ser feito o controle dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais 	produtos<br> e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao proprietário,vizamos essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o responsável e assim corrigí-las de<br> maneira mais direta e controle também da data de contratação e etc deste pois entendemos que é muito mais provável alcançar o<br> sucesso se houver uma equipe unida e organizada.
-
---------Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso-----(frase motivacional necessária para que o empresário insira aos funcionários um controle de modo que os mesmos aceitem como algo bom e não como uma vigilancia constante e assim o cumpram com mais amor )----------
+-------- Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso -------- 
 
  
 
@@ -433,7 +432,8 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-	LINK DO COLAB: (https://colab.research.google.com/drive/1AhTAhI60FVkg8UhlZw7WZxFTq1wd2FuV?usp=sharing)
+> LINK DO COLAB:
+	https://colab.research.google.com/drive/1AhTAhI60FVkg8UhlZw7WZxFTq1wd2FuV?usp=sharing
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
