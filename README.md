@@ -45,10 +45,10 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
  > informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)   
  
- 	* Cliente
- 	* Pedido
- 	* Produto
-    
+	- Cliente
+	- Pedido
+	- Produto
+
  ### MODELO CONCEITUAL
  ![image](https://user-images.githubusercontent.com/109684951/198835219-9eb528e4-cd67-45ca-ae6b-1e9e501b2154.png)
 
@@ -77,11 +77,6 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
 ### 6	MODELO LÓGICO
 ![image](https://user-images.githubusercontent.com/109684951/198835905-aff59955-46de-4daa-bcd9-adfa2fe1341c.png)
-
-
-        a) inclusão do esquema lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
 
 ### 7	MODELO FÍSICO<br>
 
