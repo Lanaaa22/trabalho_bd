@@ -155,15 +155,6 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
 	    REFERENCES PEDIDO (codigo)
 	);
 
-	CREATE TABLE PESSOA_PEDIDO (
-	    fk_PESSOA_codigo INTEGER,
-	    fk_PEDIDO_codigo INTEGER,
-	FOREIGN KEY (fk_PESSOA_codigo)
-	    REFERENCES PESSOA (codigo),
-	FOREIGN KEY (fk_PEDIDO_codigo)
-	    REFERENCES PEDIDO (codigo)
-	);
-
            
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 
@@ -281,16 +272,6 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
 	(50, 160),
 	(40, 169);
 
-	insert into pessoa_pedido(fk_PESSOA_codigo, fk_PEDIDO_codigo)
-	values(002,159),
-	(005, 150),
-	(006, 160),
-	(001, 155),
-	(003, 167),
-	(009, 166),
-	(010, 152);
-
-	select * from pessoa_pedido
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 > LINK DO COLAB:
