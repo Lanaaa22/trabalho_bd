@@ -375,23 +375,23 @@ b) Criar uma consulta para cada tipo de função data apresentada.
 a) Criar minimo 3 de exclusão
 b) Criar minimo 3 de atualização
 
-* Aumentando a diaria do funcionario luiz */
-update funcionario set diaria = 100.00 where fk_pessoa_codigo = 004;
+	/* Aumentando a diaria do funcionario luiz */
+	update funcionario set diaria = 100.00 where fk_pessoa_codigo = 004;
 
-/* diminuindo a carga horaria do funcionario 007 */
-update funcionario set qtd_dia = 5 where fk_pessoa_codigo = 007;
+	/* diminuindo a carga horaria do funcionario 007 */
+	update funcionario set qtd_dia = 5 where fk_pessoa_codigo = 007;
 
-/* Trocando a forma de pagamento do pedido 150 */
-update pedido set FK_PAGAMENTO_codigo = 61 where codigo = 150;
+	/* Trocando a forma de pagamento do pedido 150 */
+	update pedido set FK_PAGAMENTO_codigo = 61 where codigo = 150;
 
-/* Demitindo o funcionário 4 */
-delete from funcionario where fk_pessoa_codigo = 004;
+	/* Demitindo o funcionário 4 */
+	delete from funcionario where fk_pessoa_codigo = 004;
 
-/* Cancelando um pedido */
-delete from pedido where codigo = 168;
+	/* Cancelando um pedido */
+	delete from pedido where codigo = 168;
 
-/* Apagando o pedido que já está sendo feito */
-delete from acai_pedido where fk_acai_codigo = 40;
+	/* Apagando o pedido que já está sendo feito */
+	delete from acai_pedido where fk_acai_codigo = 40;
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
 a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
