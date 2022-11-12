@@ -21,9 +21,7 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 ### 3.MINI-MUNDO<br>
 
 >  No sistema desenvolvido para melhor controle do delivery de sua açaiteria "Flash Açai" o dono deseja armazenar informações sobre sua loja e todo o funcionamento.
-Nesse sistema será necessário armazenar as informações de cada cliente, que possuirá nome, cpf e telefone. Além disso, será armazenado as informações sobre cada pedido realizado pelo cliente, sendo elas código, valor unitário, quantidade e data_hora. O pedido possuirá também as informações acerca de outras entidades, ou seja as chaves estrangeiras, sendo elas: tamanho do produto, complemento, fruta, calda, forma de pagamento e endereço daquele pedido. Um cliente poderá fazer vários ou nenhum pedido e um pedido poderá ser feito somente por um cliente. Para melhor supervisão, será armazenado nesse sistema as informações de cada atendente que realiza os pedidos, ele possuirá nome, código, quantidade de dias que ele trabalha semanalmente, e o valor da diária recebida. Um atendente realiza vários ou nenhum pedido e o pedido é realizado por apenas um atendente.
-Também será armazenado as informações de cada motoboy que entrega os pedidos, ele possuirá nome, código, quantidade de dias que ele trabalha semanalmente, e o valor da diária recebida. Além disso, o motoboy receberá o valor integral das taxas de cada entrega realizada por ele, a taxa será declarada de acordo com o bairro da entrega. Um motoboy entrega vários ou nenhum pedido e o pedido é entregue por apenas um motoboy.
-
+Nesse sistema será necessário armazenar as informações de cada cliente, que possuirá nome, cpf e telefone. Além disso, será armazenado as informações sobre cada pedido realizado pelo cliente, sendo elas código, valor unitário, quantidade e data_hora. O pedido possuirá também as informações acerca de outras entidades, ou seja as chaves estrangeiras, sendo elas: tamanho do produto, complemento, fruta, calda, forma de pagamento e endereço daquele pedido. Um cliente poderá fazer vários ou nenhum pedido e um pedido poderá ser feito somente por um cliente. Para melhor supervisão, será armazenado nesse sistema as informações de cada funcionario que realiza os pedidos, ele possuirá nome, código, quantidade de dias que ele trabalha semanalmente, e o valor da diária recebida. Um funcionario realiza vários ou nenhum pedido e o pedido é realizado por apenas um funcionário. Além disso o funcionário será responsável pela entrega dos pedidos.
 
 
 ### 4.PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
@@ -51,7 +49,8 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
 * Açai
 
  ### 5 MODELO CONCEITUAL
-        
+ ![image](https://user-images.githubusercontent.com/92120359/201478570-eaf82df0-c4c7-40b6-8005-4be313409a82.png)
+       
     
 #### 5.1 Validação do Modelo Conceitual
 > GRUPO 1: Camila,yasmim,Isabellay e Davi nunes<br> GRUPO 2: Eduardo, Paulo Cezar, Nycooly e Elisa<br>
@@ -69,208 +68,220 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
 * PESSOA_PEDIDO: Relacionamento referênte a pessoa (que pode ser o cliente ou o funcionário) e o pedido<br>
 
 ### 6	MODELO LÓGICO
-![image](https://user-images.githubusercontent.com/109684951/198835905-aff59955-46de-4daa-bcd9-adfa2fe1341c.png)
+![image](https://user-images.githubusercontent.com/92120359/201478999-d6bfef06-8f9e-4259-ad4e-07a0a6e13090.png)
 
 ### 7	MODELO FÍSICO<br>
 
-	drop table if exists FORMA_CONTATO,ENDERECO,ACAI,PAGAMENTO,PEDIDO,PESSOA,ACAI_PEDIDO,PESSOA_PEDIDO;
+	drop table if exists FORMA_CONTATO;
+CREATE TABLE FORMA_CONTATO (
+    codigo INTEGER PRIMARY KEY,
+    nome VARCHAR(255),
+    contato VARCHAR(40)
+);
 
-	CREATE TABLE FORMA_CONTATO (
-	    codigo INTEGER PRIMARY KEY,
-	    nome VARCHAR(255),
-	    contato VARCHAR(40)
-	);
+drop table if exists ENDERECO;
+CREATE TABLE ENDERECO (
+    cep VARCHAR(25),
+    nome_logradouro VARCHAR(255),
+    numero INTEGER,
+    codigo INTEGER PRIMARY KEY,
+    tipo_logradouro VARCHAR(25),
+    bairro VARCHAR(25),
+    estado VARCHAR(25),
+    municipio VARCHAR(25)
+);
 
-	CREATE TABLE ENDERECO (
-	    cep VARCHAR(25),
-	    nome_logradouro VARCHAR(255),
-	    numero INTEGER,
-	codigo INTEGER PRIMARY KEY,
-	    tipo_logradouro VARCHAR(25),
-	    bairro VARCHAR(25),
-	    estado VARCHAR(25),
-	    municipio VARCHAR(25)
-	);
+drop table if exists ACAI;
+CREATE TABLE ACAI (
+    codigo INTEGER PRIMARY KEY,
+    tamanho VARCHAR(25),
+    nome VARCHAR(25),
+    descricao VARCHAR(255)
+);
 
-	CREATE TABLE ACAI (
-	    codigo INTEGER PRIMARY KEY,
-	    tamanho VARCHAR(25),
-	    nome VARCHAR(25),
-	    descricao VARCHAR(255)
-	);
+drop table if exists PAGAMENTO;
+CREATE TABLE PAGAMENTO (
+    codigo INTEGER PRIMARY KEY,
+    forma_pagamento VARCHAR(25)
+);
 
-	CREATE TABLE PAGAMENTO (
-	    codigo INTEGER PRIMARY KEY,
-	    forma_pagamento VARCHAR(25)
-	);
+drop table if exists PESSOA;
+CREATE TABLE PESSOA (
+    codigo INTEGER PRIMARY KEY,
+    nome VARCHAR(255)
+);
 
-	CREATE TABLE PESSOA (
-	    codigo INTEGER PRIMARY KEY,
-	    nome VARCHAR(255)
-	);
-
-	CREATE TABLE CLIENTE(
+drop table if exists CLIENTE;
+CREATE TABLE CLIENTE(
 	cpf varchar(25),
 	FK_PESSOA_codigo INTEGER,
 	FK_FORMA_CONTATO_codigo INTEGER,
 	FOREIGN KEY (FK_PESSOA_codigo)
-	    REFERENCES PESSOA (codigo),
+    REFERENCES PESSOA (codigo),
 	FOREIGN KEY (FK_FORMA_CONTATO_codigo)
-	    REFERENCES FORMA_CONTATO (codigo)
-	);
+    REFERENCES FORMA_CONTATO (codigo)
+);
 
-	CREATE TABLE FUNCIONARIO(
+drop table if exists FUNCIONARIO;
+CREATE TABLE FUNCIONARIO(
 	qtd_dia integer,
 	diaria float,
 	FK_PESSOA_codigo INTEGER,
 	FOREIGN KEY (FK_PESSOA_codigo)
-	    REFERENCES PESSOA (codigo)
-	);
+    REFERENCES PESSOA (codigo)
+);
 
-	CREATE TABLE PEDIDO (
-	    codigo INTEGER PRIMARY KEY,
-	    valor_uni FLOAT,
-	    qtd_acai INTEGER,
-	    data_hora TIMESTAMP,
-	    FK_ENDERECO_codigo INTEGER,
-	    FK_PAGAMENTO_codigo INTEGER,
-	    FK_PESSOA_cliente_codigo INTEGER,
-	    FK_PESSOA_funcionario_codigo INTEGER,
+drop table if exists PEDIDO;
+CREATE TABLE PEDIDO (
+    codigo INTEGER PRIMARY KEY,
+    valor_uni FLOAT,
+    qtd_acai INTEGER,
+    data_hora TIMESTAMP,
+    FK_ENDERECO_codigo INTEGER,
+    FK_PAGAMENTO_codigo INTEGER,
+    FK_PESSOA_cliente_codigo INTEGER,
+    FK_PESSOA_funcionario_codigo INTEGER,
 	FOREIGN KEY (FK_ENDERECO_codigo)
-	    REFERENCES ENDERECO (codigo),
+    REFERENCES ENDERECO (codigo),
 	FOREIGN KEY (FK_PAGAMENTO_codigo)
-	    REFERENCES PAGAMENTO (codigo),
+    REFERENCES PAGAMENTO (codigo),
 	FOREIGN KEY (FK_PESSOA_cliente_codigo)
-	    REFERENCES PESSOA (codigo),
+    REFERENCES PESSOA (codigo),
 	FOREIGN KEY (FK_PESSOA_funcionario_codigo)
-	    REFERENCES PESSOA (codigo)
-	);
+    REFERENCES PESSOA (codigo)
+);
 
-	CREATE TABLE ACAI_PEDIDO (
-	    fk_ACAI_codigo INTEGER,
-	    fk_PEDIDO_codigo INTEGER,
+drop table if exists ACAI_PEDIDO;
+CREATE TABLE ACAI_PEDIDO (
+    fk_ACAI_codigo INTEGER,
+    fk_PEDIDO_codigo INTEGER,
 	FOREIGN KEY (fk_ACAI_codigo)
-	    REFERENCES ACAI (codigo),
+    REFERENCES ACAI (codigo),
 	FOREIGN KEY (fk_PEDIDO_codigo)
-	    REFERENCES PEDIDO (codigo)
-	);
+    REFERENCES PEDIDO (codigo)
+);
+
+drop table if exists PESSOA_PEDIDO;
+CREATE TABLE PESSOA_PEDIDO (
+    fk_PESSOA_codigo INTEGER,
+    fk_PEDIDO_codigo INTEGER,
+	FOREIGN KEY (fk_PESSOA_codigo)
+    REFERENCES PESSOA (codigo),
+	FOREIGN KEY (fk_PEDIDO_codigo)
+    REFERENCES PEDIDO (codigo)
+);
 
            
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 
 	insert into forma_contato(codigo, nome, contato)
-	values(1, 'E-mail', 'gustavo43@gmail.com'),
-	(2, 'Telefone', '(27) 3419-5155'),
-	(3, 'Telefone', '(27) 2250-6347'),
-	(4, 'E-mail', 'Eduarda123_l@gmail.com'),
-	(5, 'E-mail', 'MariaVa_32@gmail.com'),
-	(6, 'Telefone','(27) 2332-2719'),
-	(7, 'Telefone','(27) 3750-9836'),
-	(8, 'Telefone','(27) 2725-2842'),
-	(9, 'Telefone','(27) 2854-2690'),
-	(10,'Telefone','(27) 2785-4410'),
-	(11, 'E-mail', '(27) 2756-8864');
+values(1, 'E-mail', 'gustavo43@gmail.com'),
+(2, 'Telefone', '(27) 3419-5155'),
+(3, 'Telefone', '(27) 2250-6347'),
+(4, 'E-mail', 'Eduarda123_l@gmail.com'),
+(5, 'E-mail', 'MariaVa_32@gmail.com'),
+(6, 'Telefone','(27) 2332-2719'),
+(7, 'Telefone','(27) 3750-9836'),
+(8, 'Telefone','(27) 2725-2842'),
+(9, 'Telefone','(27) 2854-2690'),
+(10,'Telefone','(27) 2785-4410');
 
-	select * from forma_contato;
+insert into endereco(cep, nome_logradouro, numero, codigo, tipo_logradouro, bairro, estado, municipio)
+values ('29024-043', '21 de Novembro', 1110, 51, 'rua', 'São Pedro', 'Espírito Santo', 'Vitória'),
+('29984-023', 'Serafim Derenze', 2213, 52, 'Rodovia', 'Grande Vitória ','Espírito Santo','Vitória'),
+('29876-865', 'Abdo Saad', 5333, 53, 'Rodovia', 'Jacaraípe','Espírito Santo', 'Serra'),
+('29446-048', 'Encanto das Ostras', 4921, 54, 'Residencial', 'São Francisco','Espírito Santo','Serra'),
+('29764-958', '22 de Novembro', 6235, 55, 'rua', 'São Pedro','Espírito Santo','Vitória'),
+('29473-764', 'Das Jandaias', 1267, 56, 'rua', 'Das Laranjeiras', 'Espírito Santo', 'Serra'),
+('29745-140', 'dos Colibris', 354, 57, 'Avenida', 'Morada de Laranjeiras','Espírito Santo', 'Serra'),
+('29465-434', 'Vila Sol', 6077, 58, 'Residencial', 'Morada de Laranjeiras','Espírito Santo','Serra'),
+('29435-724', 'Atlântica', 56445, 59, 'Avenida', 'Morada de Laranjeiras','Espírito Santo','Serra'),
+('29862-867', 'Gardenia', 8788, 50, 'rua', 'Jardim Limoeiro','Espírito Santo','Serra');
 
-	insert into endereco(cep, nome_logradouro, numero, codigo, tipo_logradouro, bairro, estado, municipio)
-	values ('29024-043', '21 de Novembro', 1110, 51, 'rua', 'São Pedro', 'Espírito Santo', 'Vitória'),
-	('29984-023', 'Serafim Derenze', 2213, 52, 'Rodovia', 'Grande Vitória ','Espírito Santo','Vitória'),
-	('29876-865', 'Abdo Saad', 5333, 53, 'Rodovia', 'Jacaraípe','Espírito Santo', 'Serra'),
-	('29446-048', 'Encanto das Ostras', 4921, 54, 'Residencial', 'São Francisco','Espírito Santo','Serra'),
-	('29764-958', '22 de Novembro', 6235, 55, 'rua', 'São Pedro','Espírito Santo','Vitória'),
-	('29473-764', 'Das Jandaias', 1267, 56, 'rua', 'Das Laranjeiras', 'Espírito Santo', 'Serra'),
-	('29745-140', 'dos Colibris', 354, 57, 'Avenida', 'Morada de Laranjeiras','Espírito Santo', 'Serra'),
-	('29465-434', 'Vila Sol', 6077, 58, 'Residencial', 'Morada de Laranjeiras','Espírito Santo','Serra'),
-	('29435-724', 'Atlântica', 56445, 59, 'Avenida', 'Morada de Laranjeiras','Espírito Santo','Serra'),
-	('29862-867', 'Gardenia', 8788, 50, 'rua', 'Jardim Limoeiro','Espírito Santo','Serra');
+insert into acai(codigo, tamanho ,nome, descricao)
+values (10, '1L','Gulozão Açai' , 'Leite em Pó, Disquete, Sucrilhos, Morango, kiwi, manga e Caramelo'),
+(20, '300ml', 'Gulozin Açai', 'Amendoim, Granola, Banana, Leite Condensado'),
+(30, '500ml','Gula Açai', 'Granola, Leite em pó, Manga, Kiwi e Menta'),
+(40, '300ml', 'Açafit', 'Granola, Amendoim, Banana e Mel'),
+(50, '700ml', 'Gulão Açai', 'Paçoca, Ovomaltine, Abacaxi, Kiwi, Manga, Chocolate'),
+(60, '1L','Gulozão Açai','Shocobow,Amendoim,Disquete, Morango, Abacaxi, Banana, Doce de Leite'),
+(70, '1L','Gulozão Açai', 'Leite em Pó, Granola, Disquete, Morango, Banana, Kiwi e Mel'),
+(80,'700ml', 'Açafit', 'Granola, Amendoim, Banana e Mel' ),
+(90, '300ml', 'Gulozin Açai', 'Paçoca, Granola, Morango e Caramelo'),
+(100,'500ml', 'Açafit', 'Granola, Amendoim, Banana, Manga e Mel');
 
-	select * from endereco;
 
-	insert into acai(codigo, tamanho ,nome, descricao)
-	values (10, '1L','Gulozão Açai' , 'Leite em Pó, Disquete, Sucrilhos, Morango, kiwi, manga e Caramelo'),
-	(20, '300ml', 'Gulozin Açai', 'Amendoim, Granola, Banana, Leite Condensado'),
-	(30, '500ml','Gula Açai', 'Granola, Leite em pó, Manga, Kiwi e Menta'),
-	(40, '300ml', 'Açafit', 'Granola, Amendoim, Banana e Mel'),
-	(50, '700ml', 'Gulão Açai', 'Paçoca, Ovomaltine, Abacaxi, Kiwi, Manga, Chocolate'),
-	(60, '1L','Gulozão Açai','Shocobow,Amendoim,Disquete, Morango, Abacaxi, Banana, Doce de Leite'),
-	(70, '1L','Gulozão Açai', 'Leite em Pó, Granola, Disquete, Morango, Banana, Kiwi e Mel'),
-	(80,'700ml', 'Açafit', 'Granola, Amendoim, Banana e Mel' ),
-	(90, '300ml', 'Gulozin Açai', 'Paçoca, Granola, Morango e Caramelo'),
-	(100,'500ml', 'Açafit', 'Granola, Amendoim, Banana, Manga e Mel');
+insert into pagamento (codigo, forma_pagamento)
+values(61, 'cartão'),
+(62, 'dinheiro'),
+(63, 'pix'),
+(64, 'Pic Pay');
 
-	select * from acai;
+insert into pessoa(codigo, nome)
+values (001,'Gustavo'),
+(002,'Eduarda'),
+(003,'Maria'),
+(004,'Luiz'),
+(005,'Roberto'),
+(006,'Fernando'),
+(007,'Vitória'),
+(008,'Carlos'),
+(009,'Fábiana'),
+(010,'Marcos');
 
-	insert into pagamento (codigo, forma_pagamento)
-	values(61, 'cartão'),
-	(62, 'dinheiro'),
-	(63, 'pix'),
-	(64, 'Pic Pay');
+insert into cliente(cpf, FK_PESSOA_codigo, FK_FORMA_CONTATO_codigo)
+values('333.752.060-03', 001, 1),
+('232.275.170-78', 006, 6),
+('820.944.040-30', 008, 8),
+('182.691.910-43', 010, 10),
+('994.981.150-36', 005, 7);
 
-	select * from pagamento;
+insert into funcionario(qtd_dia, diaria, FK_PESSOA_codigo)
+values(4, 80.00, 2),
+(6, 75.00, 3),
+(3, 20.00, 4),
+(7, 40.00, 7),
+(3, 35.00, 9);
 
-	insert into pessoa(codigo, nome)
-	values (001,'Gustavo'),
-	(002,'Eduarda'),
-	(003,'Maria'),
-	(004,'Luiz'),
-	(005,'Roberto'),
-	(006,'Fernando'),
-	(007,'Vitória'),
-	(008,'Carlos'),
-	(009,'Fábiana'),
-	(010,'Marcos');
+insert into pedido(codigo, valor_uni, qtd_acai, data_hora, FK_ENDERECO_codigo, FK_PAGAMENTO_codigo, FK_PESSOA_cliente_codigo, FK_PESSOA_funcionario_codigo)
+values(150, 15.00, 2, '2022-06-03 07:04:21', 50, 62, 1, 2),
+(152, 20.00, 1, '2022-04-01 01:07:22', 51, 61, 6, 2),
+(153,  18.00,'2022-06-07 07:06:01', 56, 62, 1, 5),
+(154, 23.00, '2022-04-12 03:05:03', 58, 64, 1, 2),
+(155, 13.00,'2022-03-03 09:08:21', 52, 61, 1, 2),
+(156, 15.00,'2022-12-05 04:01:12', 53, 61, 1, 3),
+(157, 18.00,'2022-11-12 05:08:04', 55, 61, 8, 2),
+(158, 23.00,'2022-10-04 03:05:06', 55, 63, 10, 2),
+(159, 13.00,'2022-03-02 15:02:07', 55, 64, 6, 2),
+(160, 15.00,'2022-09-22 04:45:32', 58, 62, 1, 3),
+(161, 13.00,'2022-06-03 07:04:21', 53, 62, 8, 3),
+(162, 15.00,'2022-04-01 01:07:22', 54, 62, 8, 4),
+(163, 18.00,'2022-06-07 07:06:01', 55, 62, 8, 9),
+(164, 23.00,'2022-04-12 03:05:03', 55, 62, 6, 9),
+(165, 13.00,'2022-03-03 09:08:21', 55, 61, 10, 2),
+(166, 15.00,'2022-12-05 04:01:12', 57, 64, 10, 2),
+(167, 18.00,'2022-11-12 05:08:04', 57, 64, 10, 9),
+(168, 23.00,'2022-10-04 03:05:06', 57, 64, 6, 9),
+(169, 13.00,'2022-03-02 15:02:07', 57, 61, 6, 9);
 
-	select * from pessoa;
+insert into acai_pedido (fk_ACAI_codigo, fk_PEDIDO_codigo)
+values(10, 150),
+(20, 152),
+(30, 154),
+(50, 155),
+(90, 167),
+(50, 160),
+(40, 169);
 
-	insert into cliente(cpf, FK_PESSOA_codigo, FK_FORMA_CONTATO_codigo)
-	values('333.752.060-03', 001, 1),
-	('232.275.170-78', 006, 6),
-	('820.944.040-30', 008, 8),
-	('182.691.910-43', 010, 10),
-	('994.981.150-36', 005, 7);
-
-	select * from cliente;
-	insert into funcionario(qtd_dia, diaria, FK_PESSOA_codigo)
-	values(4, 80.00, 002),
-	(6, 75.00, 003),
-	(3, 20.00, 004),
-	(7, 40.00, 007),
-	(3, 35.00, 009);
-
-	select * from funcionario;
-
-	insert into pedido(codigo, valor_uni, qtd_acai, data_hora, FK_ENDERECO_codigo, FK_PAGAMENTO_codigo, FK_PESSOA_cliente_codigo, FK_PESSOA_funcionario_codigo)
-	values(150, 15.00, 2, '2022-06-03 07:04:21', 50, 62, 1, 2),
-	(152, 20.00, 1, '2022-04-01 01:07:22', 51, 61, 6, 2),
-	(153,  18.00,5,'2022-06-07 07:06:01', 56, 62, 1, 5),
-	(154, 23.00, 4,'2022-04-12 03:05:03', 58, 64, 1, 2),
-	(155, 13.00,3,'2022-03-03 09:08:21', 52, 61, 1, 2),
-	(156, 15.00,5,'2022-12-05 04:01:12', 53, 61, 1, 3),
-	(157, 18.00,6, '2022-11-12 05:08:04', 55, 61, 8, 2),
-	(158, 23.00,8,'2022-10-04 03:05:06', 55, 63, 10, 2),
-	(159, 13.00,5,'2022-03-02 15:02:07', 55, 64, 6, 2),
-	(160, 15.00,3,'2022-09-22 04:45:32', 58, 62, 1, 3),
-	(161, 13.00,1,'2022-06-03 07:04:21', 53, 62, 8, 3),
-	(162, 15.00,3,'2022-04-01 01:07:22', 54, 62, 8, 4),
-	(163, 18.00,5,'2022-06-07 07:06:01', 55, 62, 8, 9),
-	(164, 23.00,8,'2022-04-12 03:05:03', 55, 62, 6, 9),
-	(165, 13.00,2,'2022-03-03 09:08:21', 55, 61, 10, 2),
-	(166, 15.00,9,'2022-12-05 04:01:12', 57, 64, 10, 2),
-	(167, 18.00,1,'2022-11-12 05:08:04', 57, 64, 10, 9),
-	(168, 23.00,5,'2022-10-04 03:05:06', 57, 64, 6, 9),
-	(169, 13.00,1,'2022-03-02 15:02:07', 57, 61, 6, 9);
-
-	select * from pedido;
-
-	insert into acai_pedido (fk_ACAI_codigo, fk_PEDIDO_codigo)
-	values(10, 150),
-	(20, 152),
-	(30, 154),
-	(50, 155),
-	(90, 167),
-	(50, 160),
-	(40, 169);
+select * from forma_contato;
+select * from endereco;
+select * from acai;
+select * from pagamento;
+select * from pessoa;
+select * from cliente;
+select * from funcionario;
+select * from pedido;
+select * from acai_pedido;
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
@@ -437,7 +448,7 @@ b) Outras junções que o grupo considere como sendo as de principal importânci
 	select pedido.codigo, pessoa.nome
 	from pedido
 	inner join pessoa
-	on(pedido.fk_pessoa_funcionario_codigo = pessoa.codigo)
+	on(pedido.fk_pessoa_cliente_codigo = pessoa.codigo)
 	order by(pedido.codigo);
 
 	select cliente.fk_pessoa_codigo as codigo_cliente, forma_contato
@@ -513,15 +524,96 @@ a) Criar minimo 1 de cada tipo
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+	
+	create view salario_semanal_funcionario as
+	(select fk_pessoa_codigo as codigo_funcionario,
+	qtd_dia * diaria as salario_semanal
+	from funcionario);
+	select * from salario_semanal_funcionario;
+
+	create view dados_do_cliente as
+	(select fk_pessoa_codigo as codigo, pessoa.nome, contato
+	from cliente
+	inner join pessoa
+	on(cliente.fk_pessoa_codigo = pessoa.codigo)
+	inner join forma_contato
+	on(cliente.fk_forma_contato_codigo = forma_contato.codigo));
+	select * from dados_do_cliente;
+
+	create view funcionario_fez_pedido as
+	(select pedido.codigo as codigo_pedido, 
+	funcionario.fk_pessoa_codigo as codigo_funcionario, 
+	pessoa.nome as nome_funcionario
+	from pedido
+	inner join funcionario
+	on(pedido.fk_pessoa_funcionario_codigo = funcionario.fk_pessoa_codigo)
+	inner join pessoa
+	on(funcionario.fk_pessoa_codigo = pessoa.codigo));
+	select * from funcionario_fez_pedido;
+
+	create view tamanho_nome_dos_pedidos as 
+	(select acai_pedido.fk_pedido_codigo as codigo_pedido, acai.tamanho, acai.nome
+	from acai_pedido
+	inner join acai
+	on(acai_pedido.fk_acai_codigo = acai.codigo));
+	select * from tamanho_nome_dos_pedidos;
+
+	create view codigoPedido_nomeCliente as
+	(select pedido.codigo, pessoa.nome
+	from pedido
+	inner join pessoa
+	on(pedido.fk_pessoa_cliente_codigo = pessoa.codigo));
+	select * from codigoPedido_nomeCliente;
+
+	create view qtd_pedidos_por_cliente as
+	(select fk_pessoa_cliente_codigo as codigo_cliente, 
+	sum(qtd_acai) qtd_total_pedidos
+	from pedido
+	group by(codigo_cliente));
+	select * from qtd_pedidos_por_cliente;
+
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
 a) Criar minimo 1 envolvendo GROUP BY
+b) Criar minimo 1 envolvendo algum tipo de junção
 
 	select codigo, tamanho, nome from acai where tamanho
 	in ( select tamanho from acai where tamanho<>'500ml'
 	group by tamanho)
+	
+	SELECT F.fk_pessoa_codigo as codigo_funcionario, AVG(diaria*qtd_dia) as media_salarial
+	FROM funcionario F
+	INNER JOIN
+	pedido P
+	ON (F.fk_pessoa_codigo=P.fk_pessoa_funcionario_codigo)
+	WHERE F.fk_pessoa_codigo IN (
+	 select distinct fk_pessoa_funcionario_codigo
+	 from pedido
+	 )
+	GROUP BY codigo_funcionario;
 
-b) Criar minimo 1 envolvendo algum tipo de junção
+	SELECT C.cpf as cpf_cliente, AVG(qtd_acai * valor_uni) as media_valor
+	FROM cliente C
+	INNER JOIN
+	pedido P
+	ON (C.fk_pessoa_codigo = P.fk_pessoa_cliente_codigo)
+	WHERE C.fk_pessoa_codigo IN (
+	 select distinct fk_pessoa_cliente_codigo
+	 from pedido
+	 )
+	GROUP BY cpf_cliente;
+
+	SELECT F.forma_pagamento, count(fk_pagamento_codigo) as qtd
+	FROM pagamento F
+	INNER JOIN
+	pedido P
+	ON (F.codigo = P.fk_pagamento_codigo)
+	WHERE F.codigo IN (
+	 select distinct fk_pagamento_codigo
+	 from pedido
+	 )
+	GROUP BY F.forma_pagamento;
+
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
