@@ -1,4 +1,4 @@
-# TRABALHO 01:  Açaifes
+# TRABALHO 01:  Flash Açai
 Trabalho desenvolvido durante a disciplina de Banco de dados
 
 # Sumário
@@ -13,14 +13,14 @@ Daianny Maria dadaymaria1@hotmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO
 
-> A empresa "ACAIFES" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto		Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que 		desde o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em nenhuma hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos. Para que as aplicações sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode ser feito o controle dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais 	produtos<br> e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao proprietário,vizamos essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o responsável e assim corrigí-las de<br> maneira mais direta e controle também da data de contratação e etc deste pois entendemos que é muito mais provável alcançar o<br> sucesso se houver uma equipe unida e organizada.<br>
+> A empresa "Flash Açai" visa colaborar com prestador de serviço na distribuição de açaí para o instituto federal do espiríto		Santo,tendo em vista que o local não tem acesso há muitos comércios e que certamente será sucesso, o propretário deseja que 		desde o início de seu negócio tenha total controle de vendas e entradas para que assim tenha maior controle no estoque e em nenhuma hipótese falte matéria prima e etc,visando também ser um ambiente acadêmico é necessário horários estratégicos. Para que as aplicações sejam feitas adequadamente é necessário um sistema com o cadastro do cliente pois assim pode ser feito o controle dos mesmos,já do produto será armazenado código,valor,tamanho e complementos ;outra forma de conseguir saber quais 	produtos<br> e tamanhos são mais vendidos ou não.Nesta aplicação manteremos também informações do funcionário ao proprietário,vizamos essa informação importante pois uma vez que haja erros na entrega do produto será possível que saiba o responsável e assim corrigí-las de<br> maneira mais direta e controle também da data de contratação e etc deste pois entendemos que é muito mais provável alcançar o<br> sucesso se houver uma equipe unida e organizada.<br>
 -------- Nossa motivação é a união da equipe pois acreditamos que é o que faz o trabalho alcançar o sucesso -------- 
 
  
 
 ### 3.MINI-MUNDO<br>
 
->  No sistema desenvolvido para melhor controle do delivery de sua açaiteria "Açaifes" o dono deseja armazenar informações sobre sua loja e todo o funcionamento.
+>  No sistema desenvolvido para melhor controle do delivery de sua açaiteria "Flash Açai" o dono deseja armazenar informações sobre sua loja e todo o funcionamento.
 Nesse sistema será necessário armazenar as informações de cada cliente, que possuirá nome, cpf e telefone. Além disso, será armazenado as informações sobre cada pedido realizado pelo cliente, sendo elas código, valor unitário, quantidade e data_hora. O pedido possuirá também as informações acerca de outras entidades, ou seja as chaves estrangeiras, sendo elas: tamanho do produto, complemento, fruta, calda, forma de pagamento e endereço daquele pedido. Um cliente poderá fazer vários ou nenhum pedido e um pedido poderá ser feito somente por um cliente. Para melhor supervisão, será armazenado nesse sistema as informações de cada atendente que realiza os pedidos, ele possuirá nome, código, quantidade de dias que ele trabalha semanalmente, e o valor da diária recebida. Um atendente realiza vários ou nenhum pedido e o pedido é realizado por apenas um atendente.
 Também será armazenado as informações de cada motoboy que entrega os pedidos, ele possuirá nome, código, quantidade de dias que ele trabalha semanalmente, e o valor da diária recebida. Além disso, o motoboy receberá o valor integral das taxas de cada entrega realizada por ele, a taxa será declarada de acordo com o bairro da entrega. Um motoboy entrega vários ou nenhum pedido e o pedido é entregue por apenas um motoboy.
 
@@ -274,42 +274,254 @@ Também será armazenado as informações de cada motoboy que entrega os pedidos
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-> LINK DO COLAB:
-	https://colab.research.google.com/drive/192W38yKOnMiJ8yQZ29hHF_u2P2n2EteT?usp=sharing <br>
+LINK DO COLAB:
+	https://colab.research.google.com/drive/11v6KojDP5KAxL2UXGq8W_K0EnAmODD45?usp=sharing <br>
 	
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
+	select FK_PESSOA_codigo, (diaria*qtd_dia) as salario_total from funcionario WHERE (diaria * qtd_dia) > 200;
+	
+	select * from endereco where municipio = 'Serra';
+	
+	select * from funcionario where diaria > 50;
+	
+	select * from acai where tamanho = '1L';
+  	
+	
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+ a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
+ 	
+	/* mostre os campos codigo e salario semanal de cada funcionario */
+	select fk_pessoa_codigo, diaria * qtd_dia as salario_semanal from funcionario;
+
+	/* mostre o codigo e o valor total de cada pedido */
+	select codigo, valor_uni * qtd_acai as valor_total from pedido;
+
+	/* selecione os dados dos funcionarios que trabalham 4 ou mais dias semanais e menos que 7 */
+	select * from funcionario where qtd_dia >= 4 and qtd_dia < 7;
+
+	/* selecione os contatos e o nome da forma de contato onde a forma de contato não é nula */
+	select contato, nome from forma_contato where nome is not null;
+
+	/* mostre o nome dos logradouros que pertencem aos bairros Jacaraipe e Morada de Laranjeiras */
+	select nome_logradouro from endereco where bairro = 'Jacaraípe' or bairro = 'Morada de Laranjeiras';
+
+	/* mostre o nome, tamanho e descricao dos acais que possuem o tamanho 1 litro */
+	select nome, tamanho, descricao from acai where tamanho = '1L';
+
+	/* mostre o codigo e o valor total dos pedidos realizados pelo cliente de codigo 1, renomeie para codigo_acai*/
+	select codigo as codigo_acai, qtd_acai * valor_uni as valor_total from pedido where fk_pessoa_cliente_codigo = 1;
+
+	/* selecione a chave do endereco renomeada para codigo_endereco, e a quantidade de acai, onde a quantidade de acai é maior que 2 e menor que 8 */
+	select fk_endereco_codigo as codigo_endereco, qtd_acai from pedido where qtd_acai > 2 and qtd_acai < 8;
+
+	/* mostre o codigo e o valor dos pedidos dos clientes que possuem o valor total maior que 60 e menor que 180 reais */
+	select codigo, qtd_acai * valor_uni as valor_total from pedido where qtd_acai * valor_uni > 60 and qtd_acai * valor_uni < 180;
+
+	/* mostre o nome do logradouro e o bairro dos enderecos que sao do municipio serra e seu tipo de logradouro é rua */
+	select nome_logradouro, bairro from endereco where municipio = 'Serra' and tipo_logradouro = 'rua';
+
+	/* selecione o codigo e a descricao dos acais que possuem tamanho 1L mas que também posssuem o nome de Gulozão Acai */
+	select codigo, descricao from acai where tamanho = '1L' and nome = 'Gulozão Açai';
+
+
+	
+	
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
+a) Criar outras 5 consultas que envolvam like ou ilike
+b) Criar uma consulta para cada tipo de função data apresentada.
+
+	/* Pessoas que utilizam o email como forma de contato */
+	select * from forma_contato where nome like '%E-mail%' 
+
+	/* Endereços que estao em Vitória */
+	select * from endereco where municipio like '%Vitória%'
+
+	/* Endereços que tem o tipo_logradouro igual a rua */
+	select * from endereco where tipo_logradouro like '%Rua%'
+
+	/* Tamanhos de Açais que mais pede 500ml */
+	select tamanho, nome from acai where tamanho like '%500ml%'
+
+	/* Pessoas que utilizam o Telefone como forma de contato */
+	select * from forma_contato where nome like '%Telefone%' 
+
+	/* Enderecos no bairro São Francisco */
+	select * from endereco where bairro like '%São Francisco%'
+
+	/* Enderecos que estão em uma rua */
+	select * from endereco where tipo_logradouro like '%rua%'
+
+	/* Açais de 700ml */
+	select tamanho, nome, descricao from acai where tamanho like '%700ml%'
+
+	/* Em quanto tempo foi feita o pedido */
+	select codigo, data_hora,(age(current_date,data_hora)) as idade_pedido from pedido
+
+	/* Mês em que foi feito o pedido */
+	select codigo, data_hora, extract('month' from data_hora) from pedido
+
+	/* Ano em que foi feito o pedido */
+	select codigo, data_hora, extract('year' from data_hora) from pedido
+
+	/* Dia em que foi feito o pedido */
+	select codigo, data_hora, extract('day' from data_hora) from pedido
+
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
+a) Criar minimo 3 de exclusão
+b) Criar minimo 3 de atualização
+
+* Aumentando a diaria do funcionario luiz */
+update funcionario set diaria = 100.00 where fk_pessoa_codigo = 004;
+
+/* diminuindo a carga horaria do funcionario 007 */
+update funcionario set qtd_dia = 5 where fk_pessoa_codigo = 007;
+
+/* Trocando a forma de pagamento do pedido 150 */
+update pedido set FK_PAGAMENTO_codigo = 61 where codigo = 150;
+
+/* Demitindo o funcionário 4 */
+delete from funcionario where fk_pessoa_codigo = 004;
+
+/* Cancelando um pedido */
+delete from pedido where codigo = 168;
+
+/* Apagando o pedido que já está sendo feito */
+delete from acai_pedido where fk_acai_codigo = 40;
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
-    a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
+b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+    
+	select cliente.fk_pessoa_codigo as codigo_cliente, pessoa.nome as nome_cliente, contato, pedido.codigo as codigo_pedido, bairro, acai_pedido.fk_acai_codigo as codigo_acai, acai.nome, funcionario.fk_pessoa_codigo as funcionario
+	from acai_pedido
+	inner join pedido
+	on(acai_pedido.fk_pedido_codigo = pedido.codigo)
+	inner join pessoa
+	on(pedido.fk_pessoa_cliente_codigo = pessoa.codigo)
+	inner join funcionario
+	on(pedido.fk_pessoa_funcionario_codigo = funcionario.fk_pessoa_codigo)
+	inner join cliente
+	on(pedido.fk_pessoa_cliente_codigo = cliente.fk_pessoa_codigo)
+	inner join forma_contato
+	on(cliente.fk_forma_contato_codigo = forma_contato.codigo)
+	inner join endereco
+	on(pedido.fk_endereco_codigo = endereco.codigo)
+	inner join acai
+	on(acai_pedido.fk_acai_codigo = acai.codigo)
+	;
+
+	/* Relatório que traga o codigo dos pedidos e o codigo do funcionario que realizou o pedido ordenados crescentemente pelo codigo dos pedidos. */
+	select pedido.codigo, funcionario.fk_pessoa_codigo as funcionario
+	from pedido
+	inner join funcionario
+	on(pedido.fk_pessoa_funcionario_codigo = funcionario.fk_pessoa_codigo)
+	order by(codigo);
+
+	select acai_pedido.fk_pedido_codigo as codigo_pedido, acai.tamanho, acai.nome
+	from acai_pedido
+	inner join acai
+	on(acai_pedido.fk_acai_codigo = acai.codigo)
+	order by(codigo_pedido);
+
+	select pedido.codigo, pessoa.nome
+	from pedido
+	inner join pessoa
+	on(pedido.fk_pessoa_funcionario_codigo = pessoa.codigo)
+	order by(pedido.codigo);
+
+	select pedido.codigo, pessoa.nome
+	from pedido
+	inner join pessoa
+	on(pedido.fk_pessoa_funcionario_codigo = pessoa.codigo)
+	order by(pedido.codigo);
+
+	select cliente.fk_pessoa_codigo as codigo_cliente, forma_contato
+	from cliente
+	inner join forma_contato
+	on(cliente.fk_forma_contato_codigo = forma_contato.codigo)
+	order by(codigo_cliente);
+
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-    a) Criar minimo 2 envolvendo algum tipo de junção
+a) Criar minimo 2 envolvendo algum tipo de junção
+
+	select funcionario.fk_pessoa_codigo as codigo_funcionario, count(codigo) as qtd_pedidos
+	from pedido inner join
+	funcionario on(pedido.FK_pessoa_funcionario_codigo = funcionario.fk_pessoa_codigo)
+	group by(codigo_funcionario);
+
+	select fk_pessoa_cliente_codigo as codigo_cliente, sum(qtd_acai) qtd_total_pedidos
+	from pedido
+	group by(codigo_cliente);
+
+	/* Relatório com a quantidade de pedidos por cada tamanho do produto. */
+	select tamanho, count(qtd_acai) as qtd_acai
+	from acai_pedido
+	inner join pedido
+	on(acai_pedido.fk_PEDIDO_codigo = pedido.codigo)
+	inner join acai
+	on(acai_pedido.FK_acai_codigo = acai.codigo)
+	group by(tamanho);
+
+	/* Relatório de obtenha a quantidade de pedidos por bairro */
+	select bairro, count(pedido.codigo) as qtd_pedido 
+	from pedido
+	inner join endereco
+	on(endereco.codigo = pedido.fk_endereco_codigo)
+	group by(bairro);
+
+	/* Relatório de obtenha a quantidade de pedidos por cada forma de pagamento. */
+	select pagamento.forma_pagamento, count(FK_PAGAMENTO_codigo) as qtd
+	from pedido
+	inner join pagamento
+	on(pedido.FK_PAGAMENTO_codigo = pagamento.codigo)
+	group by(pagamento.forma_pagamento);
+
+	select fk_pessoa_cliente_codigo as codigo_cliente, sum(valor_uni) as valor_total
+	from pedido
+	group by(codigo_cliente);
+
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
-    a) Criar minimo 1 de cada tipo
+a) Criar minimo 1 de cada tipo
+
+	/* Left */
+	select pessoa.nome as nome_pessoa,
+	pessoa.codigo,
+	diaria,
+	qtd_dia
+	FROM pessoa LEFT OUTER JOIN funcionario
+	ON (pessoa.codigo = funcionario.fk_pessoa_codigo)
+
+	/*  Right */
+	select forma_pagamento,
+	pagamento.codigo
+	FROM pedido RIGHT OUTER JOIN pagamento
+	ON (pedido.codigo = pagamento.codigo)
+
+	/* Full Join */
+	select * from cliente right join pessoa on pessoa.codigo = cliente.fk_pessoa_codigo
+	union 
+	select * from cliente left join pessoa on pessoa.codigo = cliente.fk_pessoa_codigo
+
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
-     a) Criar minimo 1 envolvendo GROUP BY
-     b) Criar minimo 1 envolvendo algum tipo de junção
+a) Criar minimo 1 envolvendo GROUP BY
+
+	select codigo, tamanho, nome from acai where tamanho
+	in ( select tamanho from acai where tamanho<>'500ml'
+	group by tamanho)
+
+b) Criar minimo 1 envolvendo algum tipo de junção
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
