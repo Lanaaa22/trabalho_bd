@@ -501,6 +501,13 @@ a) Criar minimo 2 envolvendo algum tipo de junção
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
 a) Criar minimo 1 de cada tipo
 
+	
+	select municipio, count(pedido.codigo)
+	from pedido
+	left outer join endereco
+	on(endereco.codigo = pedido.fk_endereco_codigo)
+	group by(municipio)
+
 	/* Left */
 	select pessoa.nome as nome_pessoa,
 	pessoa.codigo,
