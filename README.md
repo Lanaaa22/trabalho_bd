@@ -352,7 +352,7 @@ b) Criar uma consulta para cada tipo de função data apresentada.
 	select * from endereco where municipio like '%Vitória%'
 
 	/* Endereços que tem o tipo_logradouro igual a rua */
-	select * from endereco where tipo_logradouro like '%Rua%'
+	select * from endereco where tipo_logradouro like '%rua%'
 
 	/* Tamanhos de Açais que mais pede 500ml */
 	select tamanho, nome from acai where tamanho like '%500ml%'
@@ -580,7 +580,7 @@ a) Criar minimo 1 de cada tipo
 	select * from qtd_pedidos_por_cliente;
 
 
-#### 9.10	SUBCONSULTAS (Mínimo 4)<br>
+#### 9.10 SUBCONSULTAS (Mínimo 4)<br>
 a) Criar minimo 1 envolvendo GROUP BY
 b) Criar minimo 1 envolvendo algum tipo de junção
 
