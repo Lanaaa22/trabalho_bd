@@ -225,7 +225,13 @@ Nesse sistema será necessário armazenar as informações de cada cliente, que 
 	values(61, 'cartão'),
 	(62, 'dinheiro'),
 	(63, 'pix'),
-	(64, 'Pic Pay');
+	(64, 'Pic Pay'),
+	(65, 'transferência'),
+	(66, 'crédito'),
+	(67, 'vale alimentação'),
+	(68, 'depósito'),
+	(69, 'cheque'),
+	(70, 'cortesia');
 
 	insert into pessoa(codigo, nome)
 	values (001,'Gustavo'),
@@ -237,21 +243,43 @@ Nesse sistema será necessário armazenar as informações de cada cliente, que 
 	(007,'Vitória'),
 	(008,'Carlos'),
 	(009,'Fábiana'),
-	(010,'Marcos');
+	(010,'Marcos'),
+	(11,'Luiza'),
+	(12,'Bruna'),
+	(13,'Ricardo'),
+	(14,'Joao'),
+	(15,'Roberta'),
+	(16,'Fernanda'),
+	(17,'Vitor'),
+	(18,'Carl'),
+	(19,'Fábio'),
+	(20,'Melissa');
+
 
 	insert into cliente(cpf, FK_PESSOA_codigo, FK_FORMA_CONTATO_codigo)
 	values('333.752.060-03', 001, 1),
 	('232.275.170-78', 006, 6),
 	('820.944.040-30', 008, 8),
 	('182.691.910-43', 010, 10),
-	('994.981.150-36', 005, 7);
+	('994.981.150-36', 005, 7),
+	('256.981.150-36', 2, 4),
+	('283.991.150-96', 3, 1),
+	('222.981.150-36', 4, 2),
+	('913.311.150-36', 7, 11),
+	('813.981.150-36', 9, 9);
+
 
 	insert into funcionario(qtd_dia, diaria, FK_PESSOA_codigo)
 	values(4, 80.00, 2),
 	(6, 75.00, 3),
 	(3, 20.00, 4),
 	(7, 40.00, 7),
-	(3, 35.00, 9);
+	(3, 35.00, 9),
+	(2, 70.00, 16),
+	(6, 75.00, 17),
+	(5, 40.00, 18),
+	(4, 50.00, 19),
+	(4, 85.00, 20);
 
 	insert into pedido(codigo, valor_uni, qtd_acai, data_hora, FK_ENDERECO_codigo, FK_PAGAMENTO_codigo, FK_PESSOA_cliente_codigo, 			FK_PESSOA_funcionario_codigo)
 	values(150, 15.00, 2, '2022-06-03 07:04:21', 50, 62, 1, 2),
