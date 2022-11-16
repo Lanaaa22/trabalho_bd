@@ -208,7 +208,17 @@ Nesse sistema será necessário armazenar as informações de cada cliente, que 
 	(70, '1L','Gulozão Açai', 'Leite em Pó, Granola, Disquete, Morango, Banana, Kiwi e Mel'),
 	(80,'700ml', 'Açafit', 'Granola, Amendoim, Banana e Mel' ),
 	(90, '300ml', 'Gulozin Açai', 'Paçoca, Granola, Morango e Caramelo'),
-	(100,'500ml', 'Açafit', 'Granola, Amendoim, Banana, Manga e Mel');
+	(100,'500ml', 'Açafit', 'Granola, Amendoim, Banana, Manga e Mel'),
+	(11, '1L','Gulozão Açai' , 'Leite em Pó, Ovomaltine, Sucrilhos, Paçoca, Banana, Morango e Leite Condensado'),
+	(21, '300ml', 'Gulozin Açai', 'Amendoim, Shocobol, Banana, Kiwi e Leite Condensado'),
+	(31, '500ml','Gula Açai', 'Granola, Leite em pó, Paçoca, Manga, Kiwi, Uva e Menta'),
+	(41, '300ml', 'Açafit', 'Ovomaltine, Disquete, Banana, Morango e Mel'),
+	(51, '700ml', 'Gulão Açai', 'Amendoim, Gotas de Chocolate, Leite em Pó, Paçoca, Abacaxi, Kiwi, Manga e Chocolate'),
+	(61, '1L','Gulozão Açai','Shocobow, Amendoim, Ovomaltine, Morango, Abacaxi, Banana e Doce de Leite'),
+	(71, '1L','Gulozão Açai', 'Leite em Pó, Granola, Disquete, Castanha, Morango, Banana, Uva e Mel'),
+	(81,'700ml', 'Açafit', 'Granola, Amendoim, Castanha, Morango, Banana e Mel' ),
+	(91, '300ml', 'Gulozin Açai', 'Paçoca, Granola, Morango, Uva e Caramelo'),
+	(101,'500ml', 'Açafit', 'Granola, Amendoim, Leite em Pó, Banana, Manga, Uva e Mel');
 
 
 	insert into pagamento (codigo, forma_pagamento)
