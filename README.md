@@ -69,8 +69,7 @@ Nesse sistema será necessário armazenar as informações de cada cliente, que 
 * PESSOA_PEDIDO: Relacionamento referênte a pessoa (que pode ser o cliente ou o funcionário) e o pedido<br>
 
 ### 6	MODELO LÓGICO
-![image](https://user-images.githubusercontent.com/92120359/201478999-d6bfef06-8f9e-4259-ad4e-07a0a6e13090.png)
-
+![image](https://user-images.githubusercontent.com/92120359/204096070-4f3cf727-420b-49eb-84f5-1e1a11dd1a29.png)
 ### 7	MODELO FÍSICO<br>
 
 	drop table if exists FORMA_CONTATO;
