@@ -49,7 +49,8 @@ Nesse sistema será necessário armazenar as informações de cada cliente, que 
 * Açai
 
  ### 5 MODELO CONCEITUAL
- ![image](https://user-images.githubusercontent.com/92120359/201478570-eaf82df0-c4c7-40b6-8005-4be313409a82.png)
+ ![image](https://user-images.githubusercontent.com/92120359/204095945-32577854-578b-49ee-8467-c0f9b348bbcc.png)
+
        
     
 #### 5.1 Validação do Modelo Conceitual
